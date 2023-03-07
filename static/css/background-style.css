@@ -1,0 +1,361 @@
+/* BONUS TYPOGRAPHY STYLES
+--------------------------------------------------------- */
+pre, .code {
+	border-left: 5px solid #999999;
+	background: #F6F6F6;
+}
+
+blockquote span.open {
+	background: url(../img/so-q.gif) no-repeat left top;
+}
+
+blockquote span.close {
+	background: url(../img/sc-q.gif) no-repeat bottom right;
+}
+
+/* Quote hilight */
+.quote-hilite {
+	border: 1px solid #CACACC;
+	background: #FFFFFF;
+}
+
+/* Small quote */
+.small-quote span.open-quote {
+	background: url(../img/so-q.gif) no-repeat center left;
+}
+
+.small-quote span.close-quote {
+	background: url(../img/sc-q.gif) no-repeat center right;
+}
+
+.small-quote span.author {
+	border-top: 1px solid #DCDDE0;
+}
+
+/* Rropcap */
+.dropcap {
+	color: #999999;
+}
+
+/* Tips, Error, Message, Hightlight*/
+.error {
+	color: #666666;
+}
+
+.message {
+	color: #999999;
+}
+
+.tips {
+	color: #666666;
+}
+
+.highlight {
+	background: #FFFFCC;
+}
+
+/* Note Style */
+p.stickynote {
+	border: 1px solid #CACACC;
+	background: url(../img/sticky-bg.gif) no-repeat 5px center #FFFFFF;
+}
+
+p.download {
+	border: 1px solid #CACACC;
+	background: url(../img/download-bg.gif) no-repeat 5px center #FFFFFF;
+}
+
+/* Check list */
+ul.checklist li {
+	background: url(../img/checklist-bg.gif) no-repeat 0 3px;
+}
+
+/* Small checklist */
+ul.small-checklist li {
+	background: url(../img/icon_list.gif) no-repeat 0 3px;
+}
+
+/* Check list */
+ul.stars li {
+	background: url(../img/star-bg.gif) no-repeat 0 3px;
+}
+
+/* Bignumber */
+.bignumber {
+	background: url(../img/ol-bg.gif) no-repeat top left;
+	color: #7BA566;
+}
+
+/* Talking box. Thinking box. */
+div.bubble1 span.author,
+div.bubble2 span.author,
+div.bubble3 span.author,
+div.bubble4 span.author {
+}
+
+div.bubble1 div {
+	background: url(../img/bub1-br.gif) no-repeat bottom right;
+}
+
+div.bubble1 div div {
+	background: url(../img/bub1-bl.gif) no-repeat bottom left;
+}
+
+div.bubble1 div div div {
+	background: url(../img/bub1-tr.gif) no-repeat top right;
+}
+
+div.bubble1 div div div div {
+	background: url(../img/bub1-tl.gif) no-repeat top left;
+}
+
+div.bubble2 div {
+	background: url(../img/bub2-br.gif) no-repeat bottom right;
+}
+
+div.bubble2 div div {
+	background: url(../img/bub2-bl.gif) no-repeat bottom left;
+}
+
+div.bubble2 div div div {
+	background: url(../img/bub2-tr.gif) no-repeat top right;
+}
+
+div.bubble2 div div div div {
+	background: url(../img/bub2-tl.gif) no-repeat top left;
+}
+
+div.bubble3 div {
+	background: url(../img/bub3-br.gif) no-repeat bottom right;
+}
+
+div.bubble3 div div {
+	background: url(../img/bub3-bl.gif) no-repeat bottom left;
+}
+
+div.bubble3 div div div {
+	background: url(../img/bub3-tr.gif) no-repeat top right;
+}
+
+div.bubble3 div div div div {
+	background: url(../img/bub3-tl.gif) no-repeat top left;
+}
+
+div.bubble4 div {
+	background: url(../img/bub4-br.gif) no-repeat bottom right;
+}
+
+div.bubble4 div div {
+	background: url(../img/bub4-bl.gif) no-repeat bottom left;
+}
+
+div.bubble4 div div div {
+	background: url(../img/bub4-tr.gif) no-repeat top right;
+}
+
+div.bubble4 div div div div {
+	background: url(../img/bub4-tl.gif) no-repeat top left;
+}
+
+/* Legend */
+.legend-title {
+	background: #FFFFFF;
+}
+
+.legend {
+	border: 1px solid #CACACC;
+	background: #FFFFFF;
+}
+
+/* MAIN LAYOUT DIVS
+--------------------------------------------------------- */
+#ja-wrapper {
+	background: #F2F2F2;
+}
+
+#ja-containerwrap {
+	background: url(../img/cw-bg1.gif) repeat-y 50% 0;
+}
+
+#ja-containerwrap2 {
+	background: url(../img/cw-bg2.gif) no-repeat 50% 0;
+}
+
+#ja-container {
+	background: url(../img/c-bg1.gif) repeat-y 18% 0;
+}
+
+#ja-container2 {
+	padding: 20px 0;
+	background: url(../img/c-bg2.gif) no-repeat 18% 0;
+}
+
+/* Full */
+#ja-containerwrap-f {
+	background: url(../img/cwf-bg.gif) repeat-x top left #FFFFFF;
+}
+
+/* Full left */
+#ja-containerwrap-fl {
+	background: url(../img/cwf-bg.gif) repeat-x top left #FFFFFF;
+}
+
+/* Full right */
+#ja-containerwrap-fr {
+	background: url(../img/cw-bg1.gif) repeat-y 50% 0;
+}
+
+#ja-containerwrap-fr #ja-containerwrap2 {
+	background: url(../img/cw-bg2.gif) no-repeat 50% 0;
+}
+
+/* Module rounded */
+div.module h3 {
+	border-bottom: 1px solid #E9E9E9;
+	color: #7BA566;
+}
+
+div.module_black,
+div.module_green,
+div.module_blue,
+div.module_red,
+div.module {
+	background: url(../img/b-br.gif) no-repeat bottom right #FFFFFF;
+}
+
+div.module div {
+	background: url(../img/b-bl.gif) no-repeat bottom left;
+}
+
+div.module div div {
+	background: url(../img/b-tr.gif) no-repeat top right;
+}
+
+div.module div div div {
+	background: url(../img/b-tl.gif) no-repeat top left;
+}
+
+div.module_text span {
+	background: #FFFFFF;
+}
+
+div.module_text {
+	background: url(../img/bt-br.gif) no-repeat bottom right #F6F6F6;
+}
+
+div.module_text div {
+	background: url(../img/bt-bl.gif) no-repeat bottom left;
+}
+
+div.module_text div div {
+	background: url(../img/bt-tr.gif) no-repeat top right;
+}
+
+div.module_text div div div {
+	background: url(../img/bt-tl.gif) no-repeat top left;
+}
+
+/* red */
+div.module_black h3,
+div.module_green h3,
+div.module_blue h3,
+div.module_red h3 {
+	border-bottom: 1px solid #F6F6F6;
+	color: #FFFFFF;
+}
+
+div.module_red {
+	background: url(../img/br-br.gif) no-repeat bottom right #BF0000;
+	color: #FFFFFF;
+}
+
+div.module_red div {
+	background: url(../img/br-bl.gif) no-repeat bottom left;
+}
+
+div.module_red div div {
+	background: url(../img/br-tr.gif) no-repeat top right;
+}
+
+div.module_red div div div {
+	padding: 0 15px 10px;
+	background: url(../img/br-tl.gif) no-repeat top left;
+}
+
+/* blue */
+div.module_blue {
+	background: url(../img/bb-br.gif) no-repeat bottom right #025291;
+	color: #FFFFFF;
+}
+
+div.module_blue div {
+	background: url(../img/bb-bl.gif) no-repeat bottom left;
+}
+
+div.module_blue div div {
+	background: url(../img/bb-tr.gif) no-repeat top right;
+}
+
+div.module_blue div div div {
+	background: url(../img/bb-tl.gif) no-repeat top left;
+}
+
+/* green */
+div.module_green {
+	background: url(../img/bg-br.gif) no-repeat bottom right #7BA566;
+	color: #FFFFFF;
+}
+
+div.module_green div {
+	background: url(../img/bg-bl.gif) no-repeat bottom left;
+}
+
+div.module_green div div {
+	background: url(../img/bg-tr.gif) no-repeat top right;
+}
+
+div.module_green div div div {
+	padding: 0 15px 10px;
+	background: url(../img/bg-tl.gif) no-repeat top left;
+}
+
+/* black */
+div.module_black {
+	background: url(../img/bl-br.gif) no-repeat bottom right #333333;
+	color: #FFFFFF;
+}
+
+div.module_black div {
+	background: url(../img/bl-bl.gif) no-repeat bottom left;
+}
+
+div.module_black div div {
+	background: url(..img/bl-tr.gif) no-repeat top right;
+}
+
+div.module_black div div div {
+	background: url(../img/bl-tl.gif) no-repeat top left;
+}
+
+/* JOOMLA STYLE
+--------------------------------------------------------- */
+a.readon {
+	border: 1px solid #ECECEC;
+	background: url(../img/arrow.png) no-repeat 5px 48%;
+	color: #006699;
+}
+
+a.readon:hover, a.readon:active, a.readon:focus {
+	border: 1px solid #DDDDDD;
+	background: url(../img/arrow.png) no-repeat 5px 48% #F6F6F6;
+}
+
+ul.menu li.active a {
+	background-color: #ECECEC;
+}
+
+ul.menu li a:hover,
+ul.menu li a:active,
+ul.menu li a:focus {
+	background-color: #F6F6F6;
+}
