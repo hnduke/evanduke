@@ -33,5 +33,10 @@ def recordings():
     return render_template('recordings.html')
 
 
+@app.route('/research-projects')
+def research():
+    return render_template('research.html')
+
+
 if __name__ == '__main__':
     app.run()
