@@ -28,5 +28,10 @@ def performances():
     return render_template('performances.html')
 
 
+@app.route('/recordings')
+def recordings():
+    return render_template('recordings.html')
+
+
 if __name__ == '__main__':
     app.run()
