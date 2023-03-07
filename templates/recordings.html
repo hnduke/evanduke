@@ -1,165 +1,105 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% extends 'base.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+{% block title %}Recordings{% endblock title %}
 
-<head>
-<meta name="google-site-verification" content="Ybkxi4hGfdHNDSvqAZehsbF5joaR13oTzUYcqTPOR0Y" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
-  <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
-  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
-  <title>Recordings</title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/mootools.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/caption.js') }}"></script>
+{% block headerimage %}
+    <div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h3.jpg') }}) no-repeat top right;">
+{% endblock headerimage %}
 
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/system.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}" type="text/css" />
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.script.js') }}"></script>
-
-<script language="javascript" type="text/javascript">
-var rightCollapseDefault='show';
-var excludeModules='38';
-</script>
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.rightcol.js') }}"></script>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" type="text/css" />
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/background-style.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/element-style.css') }}" type="text/css" />
-
-<!--[if gte IE 7.0]>
-<style type="text/css">
-.clearfix {display: inline-block;}
-</style>
-<![endif]-->
-
-<style type="text/css">
-#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 600px;margin: 0 auto;}
-#ja-wrapper {min-width: 601px;}
-</style>
-</head>
-
-<body id="bd" class="fs3 Moz" >
-<a name="Top" id="Top"></a>
-
-<div id="ja-wrapper">
-
-
-
-<!-- BEGIN: HEADER -->
-<div id="ja-headerwrap">
-	<div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h2.jpg') }}) no-repeat top right;">
-
-				<div class="logo-text">
-			<a href="/index.php" title="evanduke.com"><span>EVAN DUKE</span></a>
-			</div>
-
-
-
-	</div>
+{% block content %}
+<div id="ja-contentwrap">
+  <div id="ja-content">
+    <div class="componentheading">
+      Recordings
+    </div>
+    <table class="blog" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Sample Recordings
+              </h2>
+              <div class="article-content">
+                <p>Jolivet- Concertino:</p>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38">
+                  <param name="id" value="niftyPlayer1" />
+                  <param name="width" value="165" />
+                  <param name="height" value="38" />
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="quality" value="high" />
+                  <param name="src" value="/media/niftyplayer.swf?file=media/Jolivet keeper.mp3" />
+                  <embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Jolivet keeper.mp3">
+                  </embed>
+                </object>
+                <p>&nbsp;</p>
+                <p>Bellini- Trumpet Concerto:�Andante:</p>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38">
+                  <param name="id" value="niftyPlayer1" />
+                  <param name="width" value="165" />
+                  <param name="height" value="38" />
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="quality" value="high" />
+                  <param name="src" value="/media/niftyplayer.swf?file=media/Bellini Mvmt 1.mp3" />
+                  <embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Bellini Mvmt 1.mp3">
+                  </embed>
+                </object>
+                <p>&nbsp;</p>
+                <p>Niehaus- Latin Holiday excerpt: </p>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38">
+                  <param name="id" value="niftyPlayer1" />
+                  <param name="width" value="165" />
+                  <param name="height" value="38" />
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="quality" value="high" />
+                  <param name="src" value="/media/niftyplayer.swf?file=media/Latin holiday excerpt.mp3" />
+                  <embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Latin holiday excerpt.mp3">
+                  </embed>
+                </object>
+                <p>&nbsp;</p>
+                <p>Ewazen- Trumpet Sonata: Andante:</p>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38">
+                  <param name="id" value="niftyPlayer1" />
+                  <param name="width" value="165" />
+                  <param name="height" value="38" />
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="quality" value="high" />
+                  <param name="src" value="/media/niftyplayer.swf?file=media/Ewazen.mp3" />
+                  <embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Ewazen.mp3">
+                  </embed>
+                </object>
+                �
+                <p>&nbsp;</p>
+                <p>Haydn Trumpet Concerto: Andante: </p>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38">
+                  <param name="id" value="niftyPlayer1" />
+                  <param name="width" value="165" />
+                  <param name="height" value="38" />
+                  <param name="bgcolor" value="#FFFFFF" />
+                  <param name="quality" value="high" />
+                  <param name="src" value="/media/niftyplayer.swf?file=media/Haydn Mvmt 2.mp3" />
+                  <embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Haydn Mvmt 2.mp3">
+                  </embed>
+                </object>
+              </div>
+              <span class="modifydate">
+              Last Updated on Thursday, 08 January 2009 22:03	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+          <br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-<!-- END: HEADER -->
-
-<!-- BEGIN: MAIN NAVIGATION -->
-<!-- END: MAIN NAVIGATION -->
-
-<div id="ja-containerwrap-fr">
-<div id="ja-containerwrap2">
-	<div id="ja-container">
-	<div id="ja-container2" class="clearfix">
-
-		<div id="ja-mainbody-fr" class="clearfix">
-
-		<!-- BEGIN: CONTENT -->
-		<div id="ja-contentwrap">
-		<div id="ja-content">
-
-
-
-			<div class="componentheading">
-	Recordings</div>
-<table class="blog" cellpadding="0" cellspacing="0">
-<tr>
-	<td valign="top">
-					<div>
-
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Sample Recordings	</h2>
-
-
-
-
-<div class="article-content">
-<p>Jolivet- Concertino:</p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38"><param name="id" value="niftyPlayer1" /><param name="width" value="165" /><param name="height" value="38" /><param name="bgcolor" value="#FFFFFF" /><param name="quality" value="high" /><param name="src" value="/media/niftyplayer.swf?file=media/Jolivet keeper.mp3" /><embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Jolivet keeper.mp3"></embed></object> <p>&nbsp;</p><p>Bellini- Trumpet Concerto:�Andante:</p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38"><param name="id" value="niftyPlayer1" /><param name="width" value="165" /><param name="height" value="38" /><param name="bgcolor" value="#FFFFFF" /><param name="quality" value="high" /><param name="src" value="/media/niftyplayer.swf?file=media/Bellini Mvmt 1.mp3" /><embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Bellini Mvmt 1.mp3"></embed></object> <p>&nbsp;</p><p>Niehaus- Latin Holiday excerpt: </p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38"><param name="id" value="niftyPlayer1" /><param name="width" value="165" /><param name="height" value="38" /><param name="bgcolor" value="#FFFFFF" /><param name="quality" value="high" /><param name="src" value="/media/niftyplayer.swf?file=media/Latin holiday excerpt.mp3" /><embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Latin holiday excerpt.mp3"></embed></object> <p>&nbsp;</p><p>Ewazen- Trumpet Sonata: Andante:</p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38"><param name="id" value="niftyPlayer1" /><param name="width" value="165" /><param name="height" value="38" /><param name="bgcolor" value="#FFFFFF" /><param name="quality" value="high" /><param name="src" value="/media/niftyplayer.swf?file=media/Ewazen.mp3" /><embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Ewazen.mp3"></embed></object>� <p>&nbsp;</p><p>Haydn Trumpet Concerto: Andante: </p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="niftyPlayer1" width="165" height="38"><param name="id" value="niftyPlayer1" /><param name="width" value="165" /><param name="height" value="38" /><param name="bgcolor" value="#FFFFFF" /><param name="quality" value="high" /><param name="src" value="/media/niftyplayer.swf?file=media/Haydn Mvmt 2.mp3" /><embed type="application/x-shockwave-flash" id="niftyPlayer1" width="165" height="38" bgcolor="#FFFFFF" quality="high" src="/media/niftyplayer.swf?file=media/Haydn Mvmt 2.mp3"></embed></object></div>
-
-	<span class="modifydate">
-		Last Updated on Thursday, 08 January 2009 22:03	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-				</td>
-</tr>
-
-<tr>
-	<td valign="top" align="center">
-				<br /><br />
-	</td>
-</tr>
-<tr>
-	<td valign="top" align="center">
-			</td>
-</tr>
-</table>
-
-
-		</div>
-		</div>
-		<!-- END: CONTENT -->
-
-				<!-- BEGIN: LEFT COLUMN -->
-		<div id="ja-col1">
-					<div class="moduletable_menu">
-					<h3>Main Menu</h3>
-					<ul class="menu"><li class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li><li class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li><li class="item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li><li class="item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li><li class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li><li id="current" class="active item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li><li class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li><li class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li></ul>		</div>
-
-		</div><br />
-		<!-- END: LEFT COLUMN -->
-
-		</div>
-
-
-	</div>
-	</div>
-</div>
-</div>
-
-
-<!-- BEGIN: FOOTER -->
-<div id="ja-footerwrap">
-<div id="ja-footer" class="clearfix">
-
-	<div>
-		<div align="center">Site created by <a href="https://3fold.agency" target="_blank">3Fold</a>. &copy; 2008. All rights reserved.<br /></div>
-	</div>
-
-
-</div>
-</div>
-<!-- END: FOOTER -->
-
-</div>
-
-
-
-</body>
-
-</html>
+<!-- END: CONTENT -->
+{% endblock content %}

@@ -1,264 +1,137 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% extends 'base.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+{% block title %}Lessons{% endblock title %}
 
-<head>
-<meta name="google-site-verification" content="Ybkxi4hGfdHNDSvqAZehsbF5joaR13oTzUYcqTPOR0Y" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
-  <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
-  <title>Lessons</title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/mootools.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/caption.js') }}"></script>
+{% block headerimage %}
+    <div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h3.jpg') }}) no-repeat top right;">
+{% endblock headerimage %}
 
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/system.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}" type="text/css" />
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.script.js') }}"></script>
-
-<script language="javascript" type="text/javascript">
-var rightCollapseDefault='show';
-var excludeModules='38';
-</script>
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.rightcol.js') }}"></script>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" type="text/css" />
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/background-style.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/element-style.css') }}" type="text/css" />
-
-<!--[if gte IE 7.0]>
-<style type="text/css">
-.clearfix {display: inline-block;}
-</style>
-<![endif]-->
-
-<style type="text/css">
-#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 600px;margin: 0 auto;}
-#ja-wrapper {min-width: 601px;}
-</style>
-</head>
-
-<body id="bd" class="fs3 Moz" >
-<a name="Top" id="Top"></a>
-
-<div id="ja-wrapper">
-
-
-
-<!-- BEGIN: HEADER -->
-<div id="ja-headerwrap">
-	<div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h3.jpg') }}) no-repeat top right;">
-
-				<div class="logo-text">
-			<a href="{{ url_for('index') }}" title="Evan Duke Enterprises"><span>EVAN DUKE</span></a>
-			</div>
-
-	
-	</div>
+{% block content %}
+<div id="ja-contentwrap">
+  <div id="ja-content">
+    <div class="componentheading">
+      Lessons
+    </div>
+    <table class="blog" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Band Clinics
+              </h2>
+              <div class="article-content">
+                <p>Band Clinics designed especially for schools can be day long events with the following possible components</p>
+                <p>Half hour private lesson with students</p>
+                <p>Masterclass on Practice and Performance anxiety</p>
+                <p>Masterclass on instrumental Care and Equipment selection</p>
+                <p>Performance Masterclass designed for students to publicly perform and get critical feedback</p>
+                <p>Seminar on College prep and Music as a career�</p>
+                <p>Question and Answer session for general questions</p>
+              </div>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Beginning Brass Studio
+              </h2>
+              <div class="article-content">
+                <p>The beginning brass studio is available  to all students who wish to begin a brass instrument. The instructor will refer  the student to the appropriate teacher when the instructor deems the student to  have successfully graduated out of the beginning brass studio. For the <a class="caption" href="http://musicteachersdirectory.org/" target="_blank">French  Horn and Trumpet students</a>, the option remains for them to be accepted into the  Trumpet or French Horn Studio.</p>
+              </div>
+              <span class="modifydate">
+              Last Updated on Monday, 12 August 2013 01:06	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Distance Lessons
+              </h2>
+              <div class="article-content">
+                <p>For the student who does not live near a music teacher for private lessons, there is the potential option of taking  private lessons via the internet. For optimal results, an I-mac (with the  capability of I-chat) will be sufficient. The lesson rate remains the same as  with private lessons. For more information with regards to distance lessons,  please contact Evan.</p>
+              </div>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Trumpet Lessons
+              </h2>
+              <div class="article-content">
+                <p>The Trumpet Studio is designed to provide  instruction from beginning trumpet students up through advanced players. </p>
+                <p><strong>The materials that a student will be asked to purchase during the time they are taking trumpet lessons includes the following:</strong></p>
+                <p>Irons Lip Flexibilities</p>
+                <p>Clarke Studies�</p>
+                <p>Etude Books include:�</p>
+                <p>Getchell Studies</p>
+                <p>Herring Etudes</p>
+                <p>Brandt Etudes</p>
+                <p>Wurm Studies</p>
+                <p>Additionally, solos and other method books may be requested a any time. Orchestral Excerpts and solos will be assigned dependent on the ability level of he student.</p>
+              </div>
+              <span class="modifydate">
+              Last Updated on Thursday, 12 August 2010 19:03	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                French Horn Lessons
+              </h2>
+              <div class="article-content">
+                <p>The French Horn Studio offers two  possible tracks of instruction. This studio is geared towards beginners up  through high school. </p>
+                <p><strong>Horn Players should be ready to purchase the following materials at any given time:</strong></p>
+                <p>Pottag-Hovey Method�</p>
+                <p>Getchell Studies�</p>
+                <p>Koprasch Etudes</p>
+                <p>Solos and Orchestral Excerpts will be assigned based upon the abilities of the student.�</p>
+              </div>
+              <span class="modifydate">
+              Last Updated on Thursday, 12 August 2010 19:04	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Required Equipment
+              </h2>
+              <div class="article-content">
+                <h2>Accessories</h2>
+                <p>&nbsp;</p>
+                <ul>
+                  <li>Metronome</li>
+                  <li>Tuner</li>
+                  <li>Pencil</li>
+                  <li>Notebook</li>
+                  <li>Appropriate Mutes�</li>
+                </ul>
+                <p>&nbsp;</p>
+                <h2>Instrument</h2>
+                <p>The student should have an instrument that is in playable condition (a.k.a., all of the required mechanisms of the instrument function properly). Other items such as color instruments (Eb trumpet, Piccolo trumpet, etc) will be recommended when the instructor deems it necessary. Mutes are essential and will be required when the literature demands it.</p>
+              </div>
+              <span class="modifydate">
+              Last Updated on Thursday, 12 August 2010 19:05	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+          <br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-<!-- END: HEADER -->
-
-<!-- BEGIN: MAIN NAVIGATION -->
-<!-- END: MAIN NAVIGATION -->
-
-<div id="ja-containerwrap-fr">
-<div id="ja-containerwrap2">
-	<div id="ja-container">
-	<div id="ja-container2" class="clearfix">
-
-		<div id="ja-mainbody-fr" class="clearfix">
-
-		<!-- BEGIN: CONTENT -->
-		<div id="ja-contentwrap">
-		<div id="ja-content">
-
-			
-
-			<div class="componentheading">
-	Lessons</div>
-<table class="blog" cellpadding="0" cellspacing="0">
-<tr>
-	<td valign="top">
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Band Clinics	</h2>
-
-
-
-
-<div class="article-content">
-<p>Band Clinics designed especially for schools can be day long events with the following possible components</p><p>Half hour private lesson with students</p><p>Masterclass on Practice and Performance anxiety</p><p>Masterclass on instrumental Care and Equipment selection</p><p>Performance Masterclass designed for students to publicly perform and get critical feedback</p><p>Seminar on College prep and Music as a career�</p><p>Question and Answer session for general questions</p></div>
-
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Beginning Brass Studio	</h2>
-
-
-
-
-<div class="article-content">
-<p>The beginning brass studio is available  to all students who wish to begin a brass instrument. The instructor will refer  the student to the appropriate teacher when the instructor deems the student to  have successfully graduated out of the beginning brass studio. For the <a class="caption" href="http://musicteachersdirectory.org/" target="_blank">French  Horn and Trumpet students</a>, the option remains for them to be accepted into the  Trumpet or French Horn Studio.</p></div>
-
-	<span class="modifydate">
-		Last Updated on Monday, 12 August 2013 01:06	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Distance Lessons	</h2>
-
-
-
-
-<div class="article-content">
-<p>For the student who does not live near a music teacher for private lessons, there is the potential option of taking  private lessons via the internet. For optimal results, an I-mac (with the  capability of I-chat) will be sufficient. The lesson rate remains the same as  with private lessons. For more information with regards to distance lessons,  please contact Evan.</p></div>
-
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Trumpet Lessons	</h2>
-
-
-
-
-<div class="article-content">
-<p>The Trumpet Studio is designed to provide  instruction from beginning trumpet students up through advanced players. </p><p><strong>The materials that a student will be asked to purchase during the time they are taking trumpet lessons includes the following:</strong></p><p>Irons Lip Flexibilities</p><p>Clarke Studies�</p><p>Etude Books include:�</p><p>Getchell Studies</p><p>Herring Etudes</p><p>Brandt Etudes</p><p>Wurm Studies</p><p>Additionally, solos and other method books may be requested a any time. Orchestral Excerpts and solos will be assigned dependent on the ability level of he student.</p></div>
-
-	<span class="modifydate">
-		Last Updated on Thursday, 12 August 2010 19:03	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			French Horn Lessons	</h2>
-
-
-
-
-<div class="article-content">
-<p>The French Horn Studio offers two  possible tracks of instruction. This studio is geared towards beginners up  through high school. </p> <p><strong>Horn Players should be ready to purchase the following materials at any given time:</strong></p><p>Pottag-Hovey Method�</p><p>Getchell Studies�</p><p>Koprasch Etudes</p><p>Solos and Orchestral Excerpts will be assigned based upon the abilities of the student.�</p></div>
-
-	<span class="modifydate">
-		Last Updated on Thursday, 12 August 2010 19:04	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Required Equipment	</h2>
-
-
-
-
-<div class="article-content">
-<h2>Accessories</h2><p>&nbsp;</p><ul><li>Metronome</li><li>Tuner</li><li>Pencil</li><li>Notebook</li><li>Appropriate Mutes�</li></ul><p>&nbsp;</p><h2>Instrument</h2><p>The student should have an instrument that is in playable condition (a.k.a., all of the required mechanisms of the instrument function properly). Other items such as color instruments (Eb trumpet, Piccolo trumpet, etc) will be recommended when the instructor deems it necessary. Mutes are essential and will be required when the literature demands it.</p></div>
-
-	<span class="modifydate">
-		Last Updated on Thursday, 12 August 2010 19:05	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-				</td>
-</tr>
-
-<tr>
-	<td valign="top" align="center">
-				<br /><br />
-	</td>
-</tr>
-<tr>
-	<td valign="top" align="center">
-			</td>
-</tr>
-</table>
-
-			
-		</div>
-		</div>
-		<!-- END: CONTENT -->
-
-				<!-- BEGIN: LEFT COLUMN -->
-		<div id="ja-col1">
-					<div class="moduletable_menu">
-					<h3>Main Menu</h3>
-					<ul class="menu"><li class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li><li class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li><li id="current" class="active item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li><li class="item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li><li class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li><li class="item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li><li class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li><li class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li></ul>		</div>
-	
-		</div><br />
-		<!-- END: LEFT COLUMN -->
-		
-		</div>
-
-		
-	</div>
-	</div>
-</div>
-</div>
-
-
-<!-- BEGIN: FOOTER -->
-<div id="ja-footerwrap">
-<div id="ja-footer" class="clearfix">
-
-	<div>
-		<div align="center">Site created by <a href="https://3fold.agency" target="_blank">3Fold</a>. &copy; 2008. All rights reserved.<br /></div>
-	</div>
-
-
-</div>
-</div>
-<!-- END: FOOTER -->
-
-</div>
-
-
-
-</body>
-
-</html>
+{% endblock content %}

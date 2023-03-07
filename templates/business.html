@@ -1,176 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% extends 'base.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+{% block title %}Business Consultations{% endblock title %}
 
-<head>
-<meta name="google-site-verification" content="Ybkxi4hGfdHNDSvqAZehsbF5joaR13oTzUYcqTPOR0Y" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
-  <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
-  <title>Business Consultations</title>
+{% block headerimage %}
+    <div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h4.jpg') }}) no-repeat top right;">
+{% endblock headerimage %}
 
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/mootools.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/caption.js') }}"></script>
-
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/system.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}" type="text/css" />
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.script.js') }}"></script>
-
-<script language="javascript" type="text/javascript">
-var rightCollapseDefault='show';
-var excludeModules='38';
-</script>
-<script language="javascript" type="text/javascript" src="{{ url_for('static', filename='js/ja.rightcol.js') }}"></script>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" type="text/css" />
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/background-style.css') }}" type="text/css" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/element-style.css') }}" type="text/css" />
-
-<!--[if gte IE 7.0]>
-<style type="text/css">
-.clearfix {display: inline-block;}
-</style>
-<![endif]-->
-
-<style type="text/css">
-#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 600px;margin: 0 auto;}
-#ja-wrapper {min-width: 601px;}
-</style>
-</head>
-
-<body id="bd" class="fs3 Moz" >
-<a name="Top" id="Top"></a>
-
-<div id="ja-wrapper">
-
-
-
-<!-- BEGIN: HEADER -->
-<div id="ja-headerwrap">
-	<div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h4.jpg') }}) no-repeat top right;">
-
-				<div class="logo-text">
-			<a href="{{ url_for('index') }}" title="Evan Duke Enterprises"><span>EVAN DUKE</span></a>
-			</div>
-	
-
-	
-	</div>
+{% block content %}
+<div id="ja-contentwrap">
+  <div id="ja-content">
+    <div class="componentheading">
+      Business Consultations
+    </div>
+    <table class="blog" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <div>
+            <div class="contentpaneopen">
+              <h2 class="contentheading">
+                Business Consultations
+              </h2>
+              <div class="article-content">
+                <p>Running a business is a challenge. Trying to build a nonprofit that is thriving in meeting both its mission as well as its budget can be daunting.</p>
+                <p>Evan has two decades of administrative experience in the for profit sector, as well as over a decade in the non profit arena. From day to day operations to assisting with helping you get the systems/operations set up that you need, it is his goal to help your business succeed.  Simply let him get everything set up the way that you need things to function and enjoy the fruits of your labor.</p>
+                <p> </p>
+                <p><strong>Services Offered:</strong></p>
+                <p>CRM discussions/implementation</p>
+                <p>Accounting Software <span style="font-size: 12.16px;">discussions/implementation</span></p>
+                <p><span style="font-size: 12.16px;">Marketing Plan </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
+                <p><span style="font-size: 12.16px;">Masterplan </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
+                <p><span style="font-size: 12.16px;">Board of Directors development </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
+                <p> </p>
+                <p><span style="font-size: 12.16px;">Each consultation begins with a session that will enable us to get a grasp of what your organization needs in order to succeed. The fee for this session is $100, and then each project will be billed an hourly rate of $50.</span></p>
+                <p><span style="font-size: 12.16px;"><br /></span></p>
+              </div>
+              <span class="modifydate">
+              Last Updated on Friday, 09 September 2022 17:10	</span>
+            </div>
+            <span class="article_separator">&nbsp;</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+          <br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="center">
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-<!-- END: HEADER -->
-
-<!-- BEGIN: MAIN NAVIGATION -->
-<!-- END: MAIN NAVIGATION -->
-
-<div id="ja-containerwrap-fr">
-<div id="ja-containerwrap2">
-	<div id="ja-container">
-	<div id="ja-container2" class="clearfix">
-
-		<div id="ja-mainbody-fr" class="clearfix">
-
-		<!-- BEGIN: CONTENT -->
-		<div id="ja-contentwrap">
-		<div id="ja-content">
-
-			
-
-			<div class="componentheading">
-	Business Consultations</div>
-<table class="blog" cellpadding="0" cellspacing="0">
-<tr>
-	<td valign="top">
-					<div>
-		
-<div class="contentpaneopen">
-
-<h2 class="contentheading">
-			Business Consultations	</h2>
-
-
-
-
-<div class="article-content">
-<p>Running a business is a challenge. Trying to build a nonprofit that is thriving in meeting both its mission as well as its budget can be daunting.</p>
-<p>Evan has two decades of administrative experience in the for profit sector, as well as over a decade in the non profit arena. From day to day operations to assisting with helping you get the systems/operations set up that you need, it is his goal to help your business succeed.  Simply let him get everything set up the way that you need things to function and enjoy the fruits of your labor.</p>
-<p> </p>
-<p><strong>Services Offered:</strong></p>
-<p>CRM discussions/implementation</p>
-<p>Accounting Software <span style="font-size: 12.16px;">discussions/implementation</span></p>
-<p><span style="font-size: 12.16px;">Marketing Plan </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
-<p><span style="font-size: 12.16px;">Masterplan </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
-<p><span style="font-size: 12.16px;">Board of Directors development </span><span style="font-size: 12.16px;">discussions/implementation</span></p>
-<p> </p>
-<p><span style="font-size: 12.16px;">Each consultation begins with a session that will enable us to get a grasp of what your organization needs in order to succeed. The fee for this session is $100, and then each project will be billed an hourly rate of $50.</span></p>
-<p><span style="font-size: 12.16px;"><br /></span></p></div>
-
-	<span class="modifydate">
-		Last Updated on Friday, 09 September 2022 17:10	</span>
-
-
-</div>
-
-<span class="article_separator">&nbsp;</span>
-		</div>
-				</td>
-</tr>
-
-<tr>
-	<td valign="top" align="center">
-				<br /><br />
-	</td>
-</tr>
-<tr>
-	<td valign="top" align="center">
-			</td>
-</tr>
-</table>
-
-			
-		</div>
-		</div>
-		<!-- END: CONTENT -->
-
-				<!-- BEGIN: LEFT COLUMN -->
-		<div id="ja-col1">
-					<div class="moduletable_menu">
-					<h3>Main Menu</h3>
-					<ul class="menu"><li class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li><li class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li><li class="item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li><li id="current" class="active item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li><li class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li><li class="item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li><li class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li><li class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li></ul>		</div>
-	
-		</div><br />
-		<!-- END: LEFT COLUMN -->
-		
-		</div>
-
-		
-	</div>
-	</div>
-</div>
-</div>
-
-
-<!-- BEGIN: FOOTER -->
-<div id="ja-footerwrap">
-<div id="ja-footer" class="clearfix">
-
-	<div>
-		<div align="center">Site created by <a href="https://3fold.agency" target="_blank">3Fold</a>. &copy; 2008. All rights reserved.<br /></div>
-	</div>
-
-
-</div>
-</div>
-<!-- END: FOOTER -->
-
-</div>
-
-
-
-</body>
-
-</html>
+{% endblock content %}

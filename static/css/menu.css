@@ -41,10 +41,6 @@
 	text-decoration: none;
 }
 
-#ja-container2 ul.menu li.active a span {
-	background: url(../img/bullet3.gif) no-repeat 5px 5px;
-}
-
 #ja-container2 ul.menu li li a span {
 	background: none;
 }

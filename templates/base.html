@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+  <head>
+    <meta name="google-site-verification" content="Ybkxi4hGfdHNDSvqAZehsbF5joaR13oTzUYcqTPOR0Y" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
+    <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
+    <title>{% block title %}Evan Duke Enterprises{% endblock title %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}" type="text/css" />
+
+    <script language="javascript" type="text/javascript">
+      var rightCollapseDefault='show';
+      var excludeModules='38';
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background-style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/element-style.css') }}" type="text/css" />
+    <!--[if gte IE 7.0]>
+    <style type="text/css">
+      .clearfix {display: inline-block;}
+    </style>
+    <![endif]-->
+    <style type="text/css">
+      #ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 600px;margin: 0 auto;}
+      #ja-wrapper {min-width: 601px;}
+    </style>
+  </head>
+  <body id="bd" class="fs3 Moz" >
+    <a name="Top" id="Top"></a>
+    <div id="ja-wrapper">
+      <!-- BEGIN: HEADER -->
+      <div id="ja-headerwrap">
+        {% block headerimage %}
+        <div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h1.jpg') }}) no-repeat top right;">
+        {% endblock headerimage %}
+          <div class="logo-text">
+            <a href="{{ url_for('index') }}" title="Evan Duke Enterprises"><span>EVAN DUKE</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- END: HEADER -->
+      <!-- BEGIN: MAIN NAVIGATION -->
+      <!-- END: MAIN NAVIGATION -->
+      <div id="ja-containerwrap-fr">
+        <div id="ja-containerwrap2">
+          <div id="ja-container">
+            <div id="ja-container2" class="clearfix">
+              <div id="ja-mainbody-fr" class="clearfix">
+                <!-- BEGIN: CONTENT -->
+                {% block content %}
+                {% endblock content %}
+                <!-- BEGIN: LEFT COLUMN -->
+                <div id="ja-col1">
+                  <div class="moduletable_menu">
+                    <h3>Main Menu</h3>
+                    <ul class="menu">
+                      <li class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li>
+                      <li class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li>
+                      <li class="item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li>
+                      <li class="item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li>
+                      <li class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li>
+                      <li class="item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li>
+                      <li class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li>
+                      <li class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <br />
+                <!-- END: LEFT COLUMN -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BEGIN: FOOTER -->
+      <div id="ja-footerwrap">
+        <div id="ja-footer" class="clearfix">
+          <div>
+            <div align="center">Site by <a href="{{ url_for('index') }}" target="_blank">Evan Duke Enterprises</a>. &copy; 2023. All rights reserved.<br /></div>
+          </div>
+        </div>
+      </div>
+      <!-- END: FOOTER -->
+    </div>
+  </body>
+</html>
