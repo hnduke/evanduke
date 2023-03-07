@@ -23,5 +23,10 @@ def business():
     return render_template('business.html')
 
 
+@app.route('/performances')
+def performances():
+    return render_template('performances.html')
+
+
 if __name__ == '__main__':
     app.run()
