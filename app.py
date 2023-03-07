@@ -18,5 +18,10 @@ def lessons():
     return render_template('lessons.html')
 
 
+@app.route('/business-consultations')
+def business():
+    return render_template('business.html')
+
+
 if __name__ == '__main__':
     app.run()
