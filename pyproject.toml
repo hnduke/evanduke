@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "evanduke"
+version = "0.0.0"
+description = ""
+authors = ["Heather Duke <clavierplayer@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
