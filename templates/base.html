@@ -15,6 +15,14 @@
     <script language="javascript" type="text/javascript">
       var rightCollapseDefault='show';
       var excludeModules='38';
+
+      document.addEventListener('DOMContentLoaded', event => {
+        let parts = location.href.split('/');
+        let page = parts[parts.length - 1] || 'index';
+        let item = document.getElementById(page);
+        item.classList.add('active');
+      });
+
     </script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/background-style.css') }}" type="text/css" />
@@ -58,14 +66,14 @@
                   <div class="moduletable_menu">
                     <h3>Main Menu</h3>
                     <ul class="menu">
-                      <li class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li>
-                      <li class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li>
-                      <li class="item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li>
-                      <li class="item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li>
-                      <li class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li>
-                      <li class="item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li>
-                      <li class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li>
-                      <li class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li>
+                      <li id="index" class="item1"><a href="{{ url_for('index') }}"><span>Home</span></a></li>
+                      <li id="about-evan" class="item2"><a href="{{ url_for('about') }}"><span>About Evan</span></a></li>
+                      <li id="lessons" class="item3"><a href="{{ url_for('lessons') }}"><span>Lessons</span></a></li>
+                      <li id="business-consultations" class="item4"><a href="{{ url_for('business') }}"><span>Business Consultations</span></a></li>
+                      <li id="performances" class="item5"><a href="{{ url_for('performances') }}"><span>Performances</span></a></li>
+                      <li id="recordings" class="item6"><a href="{{ url_for('recordings') }}"><span>Recordings</span></a></li>
+                      <li id="research-projects" class="item8"><a href="{{ url_for('research') }}"><span>Research Projects</span></a></li>
+                      <li id="contact" class="item7"><a href="{{ url_for('contact') }}"><span>Contact Evan</span></a></li>
                     </ul>
                   </div>
                 </div>
