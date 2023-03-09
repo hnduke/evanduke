@@ -3,9 +3,11 @@
 FROM python:3.10-alpine
 
 ENV POETRY_VERSION=1.2.2 \
-    POETRY_VIRTUALENVS_IN_PROJECT=true
+    POETRY_VIRTUALENVS_IN_PROJECT=true \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-RUN apk add --update-cache curl git \
+RUN apk add --update-cache curl \
     && curl -sSL https://install.python-poetry.org | POETRY_VERSION=$POETRY_VERSION python3 -
 
 WORKDIR /src

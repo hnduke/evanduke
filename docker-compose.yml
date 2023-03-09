@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    volumes:
+      - static_volume:/src/evanduke/static
+    ports:
+      - "8080:8080"
+
+  nginx:
+    image: nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - static_volume:/src/evanduke/static
+    depends_on:
+      - web
+
+volumes:
+  static_volume:
