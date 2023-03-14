@@ -5,7 +5,7 @@ trumpet performances, brass lessons, business and non-profit administration, and
 
 ## About
 
-Evan Duke Enterprises created a business site in 2008 using Joomba. It is currently being updated.
+Evan Duke Enterprises created a business site in 2008 using Joomla. It is currently being updated.
 
 ## Roadmap
 
