@@ -2,19 +2,20 @@ version: "3.3"
 services:
   web:
     build: .
+    restart: always
     volumes:
       - static_volume:/src/evanduke/static
-    ports:
-      - "8080:8080"
 
   nginx:
-    image: nginx
-    ports:
-      - "8081:80"
+    build: nginx
+    restart: always
     volumes:
       - static_volume:/src/evanduke/static
     depends_on:
       - web
+    ports:
+      - "80:80"
+
 
 volumes:
   static_volume:
