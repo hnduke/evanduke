@@ -5,6 +5,8 @@ services:
     restart: always
     volumes:
       - static_volume:/src/evanduke/static
+    ports:
+      - "8080:80"
 
   nginx:
     build: nginx
