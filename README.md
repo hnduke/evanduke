@@ -11,7 +11,7 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### In Progress
 
-- Deploy to AWS Lightsail
+- Deploy to AWS Lightsail (waiting on domain transfer)
 
 ### Backlog
 
