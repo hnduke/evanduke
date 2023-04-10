@@ -11,10 +11,11 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### In Progress
 
-- Deploy to AWS Lightsail (waiting on domain transfer)
+- Redesign consultation
 
 ### Backlog
 
+- Create GHA CI/CD pipeline
 - Exploration and requirements pending
 - Visual redesign pending
 
@@ -26,3 +27,4 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 ### Done
 
 - Port the site to Flask using the same content, structure, and public resources.
+- Deploy port to AWS Lightsail
