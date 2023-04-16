@@ -25,7 +25,7 @@ jobs:
           python-version: $PYTHON_VERSION
           cache: pip
         env:
-          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
+          AGENT_TOOLSDIRECTORY: '/opt/github/actions-runner/_work/_tool'
 
       - name: Install dependencies
         run: >
