@@ -1,0 +1,73 @@
+name: Deploy to Staging
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PYTHON_VERSION: '3.10'
+      POETRY_VERSION: '1.2.2'
+    steps:
+    - name: Check repository owner
+        run: |
+          if [ "$GITHUB_ACTOR" != "$GITHUB_REPOSITORY_OWNER" ]; then
+            echo "Only the repository owner can trigger this workflow."
+            exit 1
+          fi
+
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: $PYTHON_VERSION
+
+      - name: Install dependencies
+        run: >
+          curl -sSL https://install.python-poetry.org | POETRY_VERSION=$POETRY_VERSION python3 -
+          && /root/.local/bin/poetry install --only main
+
+      - name: Build images
+        run: >
+          docker build . -t evanduke -f Dockerfile-app-prod
+          && docker build . -t nginx -f Dockerfile-nginx
+
+      - name: Tag images
+          run: >
+            docker tag evanduke:latest evanduke:latest
+            && docker tag nginx:latest nginx:latest
+
+      - name: Login to AWS
+          uses: aws-actions/configure-aws-credentials@v1
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: us-east-1a
+
+        - name: Test aws lightsail cli
+          run: aws lightsail get-container-service --service-name evandukeenterprises
+
+#      - name: Create Lightsail container service for staging
+#        run: aws lightsail create-container-service --service-name evandukeenterprises-staging --power nano --scale 1
+#        continue-on-error: true
+#
+#      - name: Push containers to service
+#        run: >
+#          aws lightsail push-container-image --service-name evandukeenterprises-staging --label evanduke --image evanduke:latest
+#          aws lightsail push-container-image --service-name evandukeenterprises-staging --label nginx --image nginx:latest
+#
+#      - name: Deploy to Lightsail
+#        run: >
+#          aws lightsail create-container-service-deployment --service-name evandukeenterprises-staging \
+#          --containers '{
+#              "app": {
+#                  "image": ":evandukeenterprises-staging.evanduke.latest"
+#              },
+#              "ingress": {
+#                  "image": ":evandukeenterprises-staging.nginx.latest",
+#                  "ports": {"80": "HTTP"}
+#              }
+#          }' \
+#          --public-endpoint '{"containerName": "ingress", "containerPort": 80}'
