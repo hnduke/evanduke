@@ -10,11 +10,11 @@ jobs:
       POETRY_VERSION: '1.2.2'
     steps:
     - name: Check repository owner
-        run: |
-          if [ "$GITHUB_ACTOR" != "$GITHUB_REPOSITORY_OWNER" ]; then
-            echo "Only the repository owner can trigger this workflow."
-            exit 1
-          fi
+      run: |
+        if [ "$GITHUB_ACTOR" != "$GITHUB_REPOSITORY_OWNER" ]; then
+          echo "Only the repository owner can trigger this workflow."
+          exit 1
+        fi
 
       - name: Checkout project
         uses: actions/checkout@v3
