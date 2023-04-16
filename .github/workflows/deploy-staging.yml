@@ -16,16 +16,21 @@ jobs:
             exit 1
           fi
 
-      - name: Checkout project
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: $PYTHON_VERSION
-          cache: pip
-        env:
-          AGENT_TOOLSDIRECTORY: '/opt/github/actions-runner/_work/_tool'
+          python-version: '3.10'
+
+#      - name: Checkout project
+#        uses: actions/checkout@v3
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: $PYTHON_VERSION
+#          cache: pip
+#        env:
+#          AGENT_TOOLSDIRECTORY: '/opt/github/actions-runner/_work/_tool'
 
       - name: Install dependencies
         run: >
