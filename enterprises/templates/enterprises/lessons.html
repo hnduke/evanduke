@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'enterprises/base.html' %}
+{% load static %}
 
 {% block title %}Lessons{% endblock title %}
 
 {% block headerimage %}
-    <div id="ja-header" class="clearfix" style="background: url({{ url_for('static', filename='img/h3.jpg') }}) no-repeat top right;">
+    <div id="ja-header" class="clearfix" style="background: url({% static 'img/h3.jpg' %}) no-repeat top right;">
 {% endblock headerimage %}
 
 {% block content %}

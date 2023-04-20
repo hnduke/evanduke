@@ -6,9 +6,11 @@ authors = ["Heather Duke <clavierplayer@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-Flask = "^2.2.3"
+python = "^3.11"
 gunicorn = "^20.1.0"
+django = "^4.2"
+django-environ = "^0.10.0"
+psycopg2 = "^2.9.6"
 
 
 [build-system]
