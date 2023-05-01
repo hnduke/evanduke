@@ -17,7 +17,7 @@ services:
     restart: always
     volumes:
       - static_volume:/static
-      - ./nginx.conf.prod:/etc/nginx/nginx.conf
+      - ./nginx.prod.conf:/etc/nginx/nginx.conf
     depends_on:
       - web
     ports:
