@@ -136,3 +136,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# App-specific settings
+
+# Initial data
+ADMIN_INITIAL_PASSWORD = env("ADMIN_INITIAL_PASSWORD", default="default")
+ADMIN_INITIAL_EMAIL = env("ADMIN_INITIAL_EMAIL", default="default@default.com")
+ADMIN_INITIAL_FIRST_NAME = env("ADMIN_INITIAL_FIRST_NAME", default="default")
+ADMIN_INITIAL_LAST_NAME = env("ADMIN_INITIAL_LAST_NAME", default="default")

@@ -5,6 +5,9 @@ set -e
 # Run migrations
 python manage.py migrate
 
+# Populate database as needed
+python manage.py populate_database
+
 # Run collectstatic if necessary
 python manage.py collectstatic --noinput
 
