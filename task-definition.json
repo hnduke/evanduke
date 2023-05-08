@@ -1,5 +1,6 @@
 {
   "family": "evanduke-web-app",
+  "executionRoleArn": "arn:aws:iam::370058150712:role/ecs-deploy",
   "containerDefinitions": [
     {
       "name": "django",
@@ -10,11 +11,31 @@
         {
           "containerPort": 8080
         }
-      ]
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "static_volume",
+          "containerPath": "/app/staticfiles"
+        }
+      ],
+      "environmentFiles": [
+        {
+          "type": "s3",
+          "value": "arn:aws:s3:::evanduke/.env"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "evanduke-django",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "evanduke"
+        }
+      }
     },
     {
       "name": "ingress",
-      "image": "nginx:alpine",
+      "image": "hnduke/nginx:latest",
       "essential": true,
       "memoryReservation": 64,
       "portMappings": [
@@ -22,7 +43,34 @@
           "containerPort": 80,
           "hostPort": 80
         }
-      ]
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "django"
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "static_volume",
+          "containerPath": "/static"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "evanduke-nginx",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "evanduke"
+        }
+      }
+    }
+  ],
+  "volumes": [
+    {
+      "name": "static_volume",
+      "host": {
+        "sourcePath": "/ecs/static_volume"
+      }
     }
   ],
   "requiresCompatibilities": [

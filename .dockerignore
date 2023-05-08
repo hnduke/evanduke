@@ -8,3 +8,5 @@ Dockerfile*
 .env
 
 *.pyc
+
+task-definition.json
