@@ -21,10 +21,6 @@ def performances(request):
     return render(request, 'enterprises/performances.html')
 
 
-def recordings(request):
-    return render(request, 'enterprises/recordings.html')
-
-
 def research(request):
     return render(request, 'enterprises/research.html')
 
