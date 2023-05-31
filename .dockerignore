@@ -8,5 +8,8 @@ Dockerfile*
 .env
 
 *.pyc
-
-task-definition.json
+.idea/
+__pycache__/
+venv/
+.aws/
+tmp/

@@ -5,8 +5,6 @@ services:
     restart: always
     volumes:
       - static_volume:/app/staticfiles
-    env_file:
-      - .env
     ports:
       - "8080:8080"
     networks:
