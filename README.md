@@ -15,16 +15,16 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### Backlog
 
-- Create GHA CI/CD pipeline
+- Create CI/CD pipeline
 - Exploration and requirements pending
 - Visual redesign pending
 
 #### Possibilities on the table
 
-- Port to Django for ease of content administration
 - Recreate frontend using React.js
 
 ### Done
 
-- Port the site to Flask using the same content, structure, and public resources.
-- Deploy port to AWS Lightsail
+- Port to Django in preparation for custom work
+- Port the site to Flask (just to quickly get the app off the ground) using the same content, structure, and public resources.
+- Deploy port to AWS EC2 instance
