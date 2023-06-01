@@ -3,7 +3,7 @@ services:
   web:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev-dev
     restart: always
     env_file:
       - .env
@@ -16,7 +16,7 @@ services:
     image: nginx:alpine
     restart: always
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.dev.conf:/etc/nginx/nginx.dev.conf
     depends_on:
       - web
     ports:
