@@ -30,6 +30,12 @@ SECRET_KEY = env('SECRET_KEY', default="")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG', default=False)
 
+# SSL settings
+if env('ENVIRONMENT') == "production":
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
 ALLOWED_HOSTS = env("ALLOWED_HOSTS", default="*").split(",")
 
 
