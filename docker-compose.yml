@@ -3,12 +3,10 @@ services:
   web:
     build:
       context: ./
-      dockerfile: Dockerfile-dev-dev
+      dockerfile: Dockerfile-dev
     restart: always
     env_file:
       - .env
-    ports:
-      - "8080:8080"
     networks:
       - evanduke-network
 
@@ -16,7 +14,7 @@ services:
     image: nginx:alpine
     restart: always
     volumes:
-      - ./nginx.dev.conf:/etc/nginx/nginx.dev.conf
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf
     depends_on:
       - web
     ports:

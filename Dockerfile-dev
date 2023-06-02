@@ -10,8 +10,8 @@ ENV POETRY_VERSION=1.3.2 \
 RUN apk add --no-cache curl \
     && curl -sSL https://install.python-poetry.org | POETRY_VERSION=$POETRY_VERSION python3 -
 
-# Expose the Gunicorn port
-EXPOSE 8080
+# Expose the Django port
+EXPOSE 8000
 
 # Set the working directory
 WORKDIR /app
@@ -23,5 +23,5 @@ COPY . .
 RUN /root/.local/bin/poetry config virtualenvs.create false \
     && /root/.local/bin/poetry install --only main --no-root
 
-CMD python manage.py runserver 0.0.0.0:8080
+CMD python manage.py runserver 0.0.0.0:8000
 

@@ -15,7 +15,7 @@ services:
     restart: always
     volumes:
       - static_volume:/static
-      - ./nginx.conf:/etc/nginx/nginx.dev.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     depends_on:
