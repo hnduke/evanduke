@@ -7,27 +7,31 @@
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
     <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
+
     <title>{% block title %}Evan Duke Enterprises{% endblock %}</title>
+
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/general.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/template.css' %}" type="text/css" />
-
-
-    <script language="javascript" type="text/javascript">
-      var rightCollapseDefault='show';
-      var excludeModules='38';
-
-      document.addEventListener('DOMContentLoaded', event => {
-        let parts = location.href.split('/');
-        let page = parts[parts.length - 1] || 'index';
-        let item = document.getElementById(page);
-        item.classList.add('active');
-      });
-
-    </script>
     <link rel="stylesheet" href="{% static 'css/menu.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/background-style.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/element-style.css' %}" type="text/css" />
+
+    <script language="javascript" type="text/javascript">
+      window.onload = function() {
+        var hamburger = document.getElementById('hamburger');
+        var nav = document.getElementById('navbar').getElementsByTagName('ul')[0];
+
+        hamburger.addEventListener('click', function(){
+          if (nav.style.display === 'none') {
+            nav.style.display = 'block';
+          } else {
+            nav.style.display = 'none';
+          }
+        });
+      };
+
+    </script>
 
     <!--[if gte IE 7.0]>
     <style type="text/css">
@@ -39,7 +43,26 @@
       #ja-wrapper {min-width: 601px;}
     </style>
   </head>
-  <body id="bd" class="fs3 Moz" >
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/ede-logo-1.png' %}" alt="Evan Duke Enterprises Home"></a>
+        <a href="javascript:void(0);" id="hamburger">&#9776;</a>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Resources</a>
+            <div class="dropdown-content">
+              <a href="#">For Nonprofits</a>
+              <a href="#">For Everyone</a>
+            </div>
+          </li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
     <a name="Top" id="Top"></a>
     <div id="ja-wrapper">
       <!-- BEGIN: HEADER -->
@@ -63,24 +86,12 @@
                 <!-- BEGIN: CONTENT -->
                 {% block content %}
                 {% endblock content %}
-                <!-- BEGIN: LEFT COLUMN -->
-                <div id="ja-col1">
-                  <div class="moduletable_menu">
-                    <h3>Main Menu</h3>
-                    <ul class="menu">
-                    <li id="index" class="item1"><a href="{% url 'index' %}"><span>Home</span></a></li>
-                    <li id="about-evan" class="item2"><a href="{% url 'about' %}"><span>About Evan</span></a></li>
-                    <li id="contact" class="item7"><a href="{% url 'contact' %}"><span>Contact Evan</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <br />
-                <!-- END: LEFT COLUMN -->
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- BEGIN: FOOTER -->
       <div id="ja-footerwrap">
         <div id="ja-footer" class="clearfix">

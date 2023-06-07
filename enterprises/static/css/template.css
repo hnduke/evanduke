@@ -5,18 +5,6 @@ html, body, form, fieldset {
 	padding: 0;
 }
 
-body {
-	color: #000000;
-	background: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 150%;
-}
-
-body#bd {
-	color: #333333;
-	background: #F2F2F2;
-}
-
 body.contentpane {
 	width: auto; /* Printable Page */
 	margin: 1em 2em;
@@ -24,10 +12,6 @@ body.contentpane {
 	margin: 0px 0px 0px 0px;
 	font-size: 12px;
 	color: #333;
-}
-
-body.fs3{
-	font-size: 12px;
 }
 
 /* Normal link */
@@ -73,16 +57,6 @@ h4 {
 p, pre, blockquote, ul, ol, h1, h2, h3, h4, h5, h6 {
 	margin: 1em 0;
 	padding: 0;
-}
-
-ul {
-	list-style: none;
-}
-
-ul li {
-	padding-left: 30px;
-	background: url(../img/bullet.gif) no-repeat 18px 8px;
-	line-height: 180%;
 }
 
 ol li {
@@ -172,28 +146,6 @@ table.adminform {
 }
 
 .adminform .inputbox {
-}
-
-.blog_more {
-	padding: 10px 0;
-	background: url(../img/hdot.gif) repeat-x top;
-}
-
-.blog_more strong {
-	margin: 0 0 5px;
-	display: block;
-	font-size: 125%;
-}
-
-.blog_more ul {
-	margin: 0;
-	padding: 0;
-}
-
-.blog_more ul li {
-	margin: 0;
-	padding: 0 0 0 17px;
-	background: url(../img/bullet.gif) no-repeat 6px 8px;
 }
 
 .category {
@@ -366,10 +318,6 @@ div.buttonheading {
 
 }
 
-#ja-mainbody-fr #ja-col1 {
-	width: 20%;
-}
-
 #ja-mainbody-fr #ja-contentwrap {
 	width: 80%;
 }
@@ -490,13 +438,6 @@ div.logo-text a span{
 
 /* MODULE
 --------------------------------------------------------- */
-div.moduletable,
-div.moduletable_menu,
-div.moduletable_text {
-	padding: 0 0 20px;
-	margin-bottom: 15px;
-
-}
 
 div.moduletable h3,
 div.moduletable_menu h3,
@@ -528,21 +469,6 @@ div.moduletable_text h3 {
 #ja-col2 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-#ja-col1 ul li,
-#ja-col2 ul li {
-	padding-left: 15px;
-	margin: 0;
-	background: url(../img/bullet.gif) no-repeat 5px 50%;
-}
-
-#ja-col1 ul, #ja-col2 ul {
-	margin: 0;
-}
-
-#ja-col1 ol, #ja-col2 ol {
-	margin-left: 5px;
 }
 
 #ja-col1 .article_separator,

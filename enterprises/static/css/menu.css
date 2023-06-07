@@ -1,75 +1,81 @@
-/* Default Joomla! Menu */
-#ja-container2 ul.menu {
-	margin: 0;
-	padding: 1px 0 0;
-	list-style: none;
-	background: url(../img/hdot2.gif) repeat-x top;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-#ja-container2 ul.menu li {
-	margin: 0 !important;
-	padding: 0 !important;
-	background: none !important;
+#navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa;
 }
 
-#ja-container2 ul.menu li a {
-	padding: 2px 0;
-	display: block;
-	color: #333333;
-	background: url(../img/hdot2.gif) repeat-x bottom;
-	text-decoration: none;
-	outline: none;
+#navbar #logo img {
+    text-decoration: none;
+    width: 5em;
 }
 
-#ja-container2 ul.menu li a span {
-	padding-left: 16px;
-	background: url(../img/bullet.gif) no-repeat 5px 5px;
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+	overflow: hidden;
 }
 
-#ja-container2 ul.menu li a:hover,
-#ja-container2 ul.menu li a:active,
-#ja-container2 ul.menu li a:focus {
-	color: #333333;
-	background: url(../img/hdot2.gif) repeat-x bottom #DDDDDD;
-	text-decoration: none;
+#navbar ul li {
+    /*margin-left: 20px;*/
+	float: left;
 }
 
-#ja-container2 ul.menu li.active a {
-	background: url(../img/hdot2.gif) repeat-x bottom #FFFFFF;
-	color: #7BA566;
-	font-weight: bold;
-	text-decoration: none;
+#navbar ul li a {
+    text-decoration: none;
+    color: #333;
+	/*text-align: center;*/
+    padding: 14px 16px;
 }
 
-#ja-container2 ul.menu li li a span {
-	background: none;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-#ja-container2 ul.menu li ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+/*#navbar ul li a, .dropdown a {*/
+/*    display: inline-block;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #f8f9fa;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#ja-container2 ul.menu li li {
-	padding: 0 0 0 15px !important;
-	list-style: none;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	text-align: left;
 }
 
-#ja-container2 ul.menu li li a {
-	color: #333333;
-	background: none !important;
-	font-size: 92%;
-	font-weight: normal;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-#ja-container2 ul.menu li li a:hover,
-#ja-container2 ul.menu li li a:active,
-#ja-container2 ul.menu li li a:focus {
-	color: #006699;
+#hamburger {
+    display: none;
 }
 
-#ja-container2 ul.menu li li a span {
-	background: url(../img/bullet.gif) no-repeat 5px;
-	font-weight: normal;
+@media screen and (max-width: 600px) {
+    #navbar ul   {display: none;}
+    #hamburger {display: inline;}
 }
