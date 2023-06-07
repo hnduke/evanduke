@@ -14,6 +14,6 @@ docker compose up -d
 
 echo "Removing old images..."
 # remove unused images
-docker image prune -f
+docker image prune -fa
 
 echo "Deployed."
