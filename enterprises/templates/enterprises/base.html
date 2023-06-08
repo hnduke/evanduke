@@ -1,9 +1,11 @@
 {% load static %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="google-site-verification" content="Ybkxi4hGfdHNDSvqAZehsbF5joaR13oTzUYcqTPOR0Y" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="Evan, Duke, Trumpet, lessons, French Horn, Beginning Brass, audition, Greenville, SC, South Carolina, Online lessons" />
     <meta name="description" content="Evan Duke music studio, Greenville, SC, provides private brass instruction to students of all ages and aims for the full development of the student's musical potential." />
@@ -17,10 +19,10 @@
     <link rel="stylesheet" href="{% static 'css/background-style.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/element-style.css' %}" type="text/css" />
 
-    <script language="javascript" type="text/javascript">
+    <script type="text/javascript">
       window.onload = function() {
-        var hamburger = document.getElementById('hamburger');
-        var nav = document.getElementById('navbar').getElementsByTagName('ul')[0];
+        let hamburger = document.getElementById('hamburger');
+        let nav = document.getElementById('navbar').getElementsByTagName('ul')[0];
 
         hamburger.addEventListener('click', function(){
           if (nav.style.display === 'none') {
