@@ -22,17 +22,13 @@
     <script type="text/javascript">
       window.onload = function() {
         let hamburger = document.getElementById('hamburger');
-        let nav = document.getElementById('navbar').getElementsByTagName('ul')[0];
+        let menu = document.getElementById('menu');
 
         hamburger.addEventListener('click', function(){
-          if (nav.style.display === 'none') {
-            nav.style.display = 'block';
-          } else {
-            nav.style.display = 'none';
-          }
+          menu.classList.toggle('open');
+          hamburger.innerHTML = menu.classList.contains('open') ? '&#10005;' : '&#9776;';
         });
       };
-
     </script>
 
     <!--[if gte IE 7.0]>
@@ -47,15 +43,18 @@
   </head>
   <body>
     <header>
-      <nav id="navbar">
-        <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/ede-logo-1.png' %}" alt="Evan Duke Enterprises Home"></a>
-        <a href="javascript:void(0);" id="hamburger">&#9776;</a>
-        <ul>
+      <nav>
+        <div id="navbar">
+          <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/ede-logo-1.png' %}" alt="Evan Duke Enterprises Home"></a>
+          <a href="javascript:void(0);" id="hamburger">&#9776;</a>
+        </div>
+
+        <ul id="menu">
           <li class="dropdown">
             <a href="#">Resources</a>
             <div class="dropdown-content">
-              <a href="#">For Nonprofits</a>
-              <a href="#">For Businesses</a>
+              <a href="#">For&#8209;Profits</a>
+              <a href="#">Nonprofits</a>
             </div>
           </li>
           <li><a href="{% url 'about' %}">About</a></li>
