@@ -396,21 +396,6 @@ div.buttonheading {
 
 /* HEADER
 --------------------------------------------------------- */
-#ja-headerwrap {
-	background: #333333;
-	color: #CCCCCC;
-	line-height: normal;
-	height: 350px;
-}
-
-#ja-header {
-	position: relative;
-	height: 350px;
-}
-
-#ja-header a {
-	color: #CCCCCC;
-}
 
 h1.logo, div.logo-text {
 	font-size: 36px;
