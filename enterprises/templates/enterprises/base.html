@@ -14,10 +14,7 @@
 
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/general.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/template.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/menu.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/background-style.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/element-style.css' %}" type="text/css" />
 
     <script type="text/javascript">
       window.onload = function() {
@@ -30,16 +27,6 @@
         });
       };
     </script>
-
-    <!--[if gte IE 7.0]>
-    <style type="text/css">
-      .clearfix {display: inline-block;}
-    </style>
-    <![endif]-->
-    <style type="text/css">
-      #ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 600px;margin: 0 auto;}
-      #ja-wrapper {min-width: 601px;}
-    </style>
   </head>
   <body>
     <header>
@@ -63,23 +50,8 @@
       </nav>
     </header>
 
-
-    <div id="ja-wrapper">
-      <!-- BEGIN: MAIN NAVIGATION -->
-      <!-- END: MAIN NAVIGATION -->
-      <div id="ja-containerwrap-fr">
-        <div id="ja-containerwrap2">
-          <div id="ja-container">
-            <div id="ja-container2" class="clearfix">
-              <div id="ja-mainbody-fr" class="clearfix">
-                <!-- BEGIN: CONTENT -->
-                {% block content %}
-                {% endblock content %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    {% block content %}
+    {% endblock content %}
 
       <!-- BEGIN: FOOTER -->
       <div id="ja-footerwrap">
