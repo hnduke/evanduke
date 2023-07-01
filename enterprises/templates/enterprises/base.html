@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/general.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/menu.css' %}" type="text/css" />
+    {% block extra-style %}{% endblock %}
 
     <script type="text/javascript">
       window.onload = function() {

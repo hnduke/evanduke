@@ -1,0 +1,11 @@
+div.paragraph {
+    margin: 50px;
+    font-family: arial, sans-serif;
+    font-size: 125%;
+}
+
+@media (max-width: 600px) {
+    div.paragraph {
+        margin: 30px;
+    }
+}

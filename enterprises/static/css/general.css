@@ -51,12 +51,12 @@ div.highlight h3 {
 	padding: 5px;
 }
 
-/*
-Make sure the text and images are int the appropriate order:
-Text and image are opposite every other block on large displays.
-Text is always first on small displays.
-*/
 @media (max-width: 600px) {
+	/*
+	Make sure the text and images are int the appropriate order:
+	Text and image are opposite every other block on large displays (as defined in the HTML).
+	Text is always first on small displays.
+	*/
 	.text-highlight {
 		order: 1;
 	}
@@ -64,4 +64,15 @@ Text is always first on small displays.
 	.img-highlight {
 		order: 2;
 	}
+
+	/* Make elements fit more comfortably on small screens*/
+	div.block .block-box {
+		padding: 10px;
+		margin: 10px;
+	}
+
+	.block-box img {
+		padding-top: 0;
+	}
+
 }
