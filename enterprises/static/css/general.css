@@ -11,8 +11,11 @@ div.block {
 	background-color: navy;
 }
 
+div.block:nth-child(odd) {
+	background-color: bisque;
+}
+
 div.block .block-box {
-	/*width: 450px;*/
 	margin: 20px;
 	padding: 20px;
 	text-align: center;
@@ -22,12 +25,12 @@ div.block .block-box {
 	background-color: #ffffff;
 	padding: 10px;
 	margin: 10px;
-	width: 450px;
+	max-width: 450px;
 }
 
 .block-box img {
 	padding: 10px;
-	width: 300px;
+	max-width: 300px;
 }
 
 div.highlight h1 {
@@ -48,6 +51,17 @@ div.highlight h3 {
 	padding: 5px;
 }
 
-@media screen and (max-width: 600px) {
+/*
+Make sure the text and images are int the appropriate order:
+Text and image are opposite every other block on large displays.
+Text is always first on small displays.
+*/
+@media (max-width: 600px) {
+	.text-highlight {
+		order: 1;
+	}
 
+	.img-highlight {
+		order: 2;
+	}
 }
