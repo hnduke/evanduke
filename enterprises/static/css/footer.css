@@ -1,0 +1,38 @@
+div.footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: #f8f9fa;
+}
+
+div.footer a {
+	font-family: arial, sans-serif;
+	text-decoration: none;
+}
+
+div.more {
+	display: flex;
+}
+
+div.footer .links {
+	padding: 2em 5em;
+}
+
+div.links a {
+	display: block;
+	padding: 0.5em;
+}
+
+div.branding {
+	width: 100%;
+	text-align: center;
+}
+
+div.branding div {
+	display: block;
+}
+
+div.branding div a img {
+	width: 5em;
+}

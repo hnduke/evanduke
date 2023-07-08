@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/general.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/menu.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" type="text/css" />
     {% block extra-style %}{% endblock %}
 
     <script type="text/javascript">
@@ -57,15 +58,28 @@
     {% block content %}
     {% endblock content %}
 
-      <!-- BEGIN: FOOTER -->
-      <div id="ja-footerwrap">
-        <div id="ja-footer" class="clearfix">
-          <div>
-            <div align="center">Site by <a href="{% url 'index' %}" target="_blank">Evan Duke Enterprises</a>. &copy; 2023. All rights reserved.<br /></div>
-          </div>
+    <!-- BEGIN: FOOTER -->
+    <div class="footer">
+      <div class="more">
+        <div class="links">
+          <h4>Looking for something else?</h4>
+          <a href="#">Brass Lessons</a>
+          <a href="#">Business Administration Services</a>
+        </div>
+        <div class="links">
+          <h4>Follow Evan</h4>
+          <a href="https://www.facebook.com/DukeEnterprisesSCOR/">Facebook</a>
+          <a href="https://www.linkedin.com/in/evan-duke-0a57ba34/">LinkedIn</a>
+          <a href="https://wa.me/8642385223">WhatsApp</a>
+          <a href="https://www.youtube.com/@EvanDukeEnterprisesInc">YouTube</a>
         </div>
       </div>
-      <!-- END: FOOTER -->
+      <div class="branding">
+        <div><a href="{% url 'index' %}" id="logo"><img src="{% static 'img/ede-logo-1.png' %}" alt="Evan Duke Enterprises Home"></a></div>
+        <div><a href="{% url 'index' %}" target="_blank">Evan Duke Enterprises</a> &copy; {% now "Y" %}</div>
+      </div>
     </div>
+    <!-- END: FOOTER -->
+
   </body>
 </html>
