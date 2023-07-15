@@ -1,8 +1,4 @@
 div.footer {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 	background-color: #f8f9fa;
 }
 
@@ -13,20 +9,24 @@ div.footer a {
 
 div.more {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
-div.footer .links {
-	padding: 2em 5em;
+div.links {
+	margin: 2em;
+	display: flex;
+	flex-direction: column;
 }
 
-div.links a {
-	display: block;
-	padding: 0.5em;
+div.links > * {
+	margin: 0.5em;
 }
 
 div.branding {
 	width: 100%;
 	text-align: center;
+	display: block;
 }
 
 div.branding div {
@@ -35,4 +35,19 @@ div.branding div {
 
 div.branding div a img {
 	width: 5em;
+}
+
+@media (max-width: 600px) {
+
+	div.more {
+		text-align: center;
+	}
+
+	div.links {
+		margin-bottom: 0;
+	}
+
+	div.branding {
+		margin-top: 1em;
+	}
 }
