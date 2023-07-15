@@ -11,19 +11,15 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### In Progress
 
-- Redesign consultation
+- Update styles
 
 ### Backlog
 
 - Create CI/CD pipeline
-- Exploration and requirements pending
-- Visual redesign pending
+- Feature: manage case studies
+- Feature: schedule a free consultation
 
-#### Possibilities on the table
-
-- Recreate frontend using React.js
-
-### Done
+### Deployed
 
 - Port to Django in preparation for custom work
 - Port the site to Flask (just to quickly get the app off the ground) using the same content, structure, and public resources.
