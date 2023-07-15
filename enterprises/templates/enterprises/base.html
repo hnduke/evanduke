@@ -18,17 +18,7 @@
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" type="text/css" />
     {% block extra-style %}{% endblock %}
 
-    <script type="text/javascript">
-      window.onload = function() {
-        let hamburger = document.getElementById('hamburger');
-        let menu = document.getElementById('menu');
-
-        hamburger.addEventListener('click', function(){
-          menu.classList.toggle('open');
-          hamburger.innerHTML = menu.classList.contains('open') ? '&#10005;' : '&#9776;';
-        });
-      };
-    </script>
+    <script src="{% static 'js/general.js' %}" type="text/javascript"></script>
 
   {% block extra_headers %}{% endblock %}
 
