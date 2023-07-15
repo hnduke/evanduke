@@ -77,6 +77,11 @@ header {
         align-items: center;
     }
 
+    #hamburger {
+        display: flex;
+        align-items: flex-end;
+    }
+
     #menu {
         display: none;
         flex-direction: column;
@@ -92,21 +97,26 @@ header {
         display: flex;
     }
 
-    #hamburger {
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .dropdown-content {
-        display: none;
-        background-color: #f8f9fa;
-        /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
-        box-shadow: none;
-        transition: max-height 0.3s ease;
+    #menu li {
+        display: block;
     }
 
     #menu li.dropdown {
         display: block;
         max-height: 500px;
+    }
+
+    #menu li a, .dropdown a {
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: relative;
+        display: none;
+        padding-left: 1.5em;
+        background-color: #eeeff0;
+        box-shadow: none;
+        transition: max-height 0.3s ease;
     }
 }
