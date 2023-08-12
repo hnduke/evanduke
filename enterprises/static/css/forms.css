@@ -1,0 +1,44 @@
+div.form p {
+    margin: auto;
+    text-align: center;
+    padding-top: 1em;
+    max-width: 50em;
+    font-family: arial, sans-serif;
+    font-size: 125%;
+    padding-bottom: 1em;
+}
+
+div.fields {
+    max-width: 35em;
+    margin: auto;
+}
+
+div.formfield label {
+    font-weight: bold;
+    font-size: 90%;
+    display: block;
+}
+
+div.formfield input, div.formfield textarea {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #eeeff0;
+    padding: 1em;
+    line-height: 100%;
+    margin-bottom: 1em;
+}
+
+div.formfield input:focus, div.formfield textarea:focus {
+    background-color: #f8f9fa;
+    border: 2px solid #6989B8;
+}
+
+button {
+    text-align: center;
+    background-color: #6989B8;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 150%;
+    font-family: arial, sans-serif;
+    padding: 10px 16px;
+}
