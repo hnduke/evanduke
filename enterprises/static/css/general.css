@@ -12,7 +12,7 @@ div.block {
 }
 
 div.block:nth-child(odd) {
-	background-color: #3190AF;
+	background-color: #6989B8;
 }
 
 div.block .block-box {
