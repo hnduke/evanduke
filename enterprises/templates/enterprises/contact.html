@@ -3,11 +3,36 @@
 
 {% block title %}Evan Duke{% endblock title %}
 
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}" type="text/css" />
+{% endblock %}
+
 {% block content %}
-    <div>
-    <p>3110 Wade Hampton Blvd. Suite 4</p>
-    <p>Taylors, SC  29687</p>
-    <p>864-735-7613</p>
-    <p><a href="mailto:trumpeter@evanduke.com">Email Evan</a></p>
+  <div class="block">
+    <div class="block-box text-highlight">
+      <div class="highlight">
+        <h1>Reach Out</h1>
+        <h3>Want to know if Evan can help?</h3>
+      </div>
     </div>
+    <div class="block-box img-highlight">
+      <img src="{% static 'img/placeholder.jpg' %}" alt="This is a placeholder. Something else should go here soon.">
+    </div>
+  </div>
+
+  <div class="form">
+    <p>Evan Duke Enterprises will never sell your contact information.</p>
+    <form method="post">
+      {% csrf_token %}
+      <div class="fields">
+        {% for field in form %}
+          <div class="formfield">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+          </div>
+        {% endfor %}
+      <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
 {% endblock content %}

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from enterprises.forms import ContactForm
+
 
 def index(request):
     return render(request, "enterprises/index.html")
@@ -10,4 +12,9 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'enterprises/contact.html')
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+    return render(request, 'enterprises/contact.html', context={"form": form})
