@@ -16,7 +16,7 @@ class Command(BaseCommand):
                 "is_superuser": True,
                 "is_staff": True,
                 "is_active": True,
-            }
+            },
         )
         if created:
             admin_user.set_password(settings.ADMIN_INITIAL_PASSWORD)
@@ -25,4 +25,4 @@ class Command(BaseCommand):
             admin_user.last_name = settings.ADMIN_INITIAL_LAST_NAME
             admin_user.save()
 
-        print('ok')
+        print("ok")

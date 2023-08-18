@@ -8,7 +8,7 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'enterprises/about.html')
+    return render(request, "enterprises/about.html")
 
 
 def contact(request):
@@ -17,4 +17,4 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-    return render(request, 'enterprises/contact.html', context={"form": form})
+    return render(request, "enterprises/contact.html", context={"form": form})
