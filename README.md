@@ -9,6 +9,19 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ## Roadmap
 
+### MVP
+
+- Finish styles (WIP)
+- Add Recaptcha to form submit (WIP)
+- Replace "Resources" with "Services" and add FAQ pages for services offered
+- Integrate Calendy
+
+### Post-launch Phase I
+
+- Add Case Studies (Resources)
+  - Design models
+  - Design UI
+
 ### In Progress
 
 - Update styles
