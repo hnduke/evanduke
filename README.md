@@ -13,8 +13,8 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 - Finish styles (WIP)
 - Add Recaptcha to form submit (WIP)
-- Replace "Resources" with "Services" and add FAQ pages for services offered
-- Integrate Calendy
+- Replace "Resources" with "Services" and add FAQ pages for services offered (DONE)
+- Integrate Calendy and place CTAs
 
 ### Post-launch Phase I
 
