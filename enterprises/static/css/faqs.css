@@ -1,0 +1,20 @@
+div.faqs {
+    margin: auto;
+    text-align: center;
+    padding-top: 1em;
+    max-width: 50em;
+    font-family: arial, sans-serif;
+    font-size: 125%;
+}
+
+div.faqs div.faq {
+    margin-bottom: 1em;
+    background-color: #eeeff0;
+    padding: 0.5em;
+    border-radius: 16px;
+}
+
+div.faq p.question {
+    font-weight: bold;
+    font-size: 105%;
+}

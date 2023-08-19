@@ -1,0 +1,29 @@
+{% extends 'enterprises/base.html' %}
+{% load static %}
+
+{% block title %}FAQS{% endblock title %}
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/faqs.css' %}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+  <div class="block">
+    <div class="block-box text-highlight">
+      <div class="highlight">
+        <h1>Frequently Asked Questions</h1>
+        <h3>{{ service_type }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="faqs">
+    {% for faq in faqs %}
+      <div class="faq">
+        <p class="question">{{ faq.question }}</p>
+        <p class>{{ faq.answer }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock content %}
