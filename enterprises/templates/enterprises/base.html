@@ -33,10 +33,10 @@
 
         <ul id="menu">
           <li class="dropdown">
-            <a href="#">Resources</a>
+            <a href="#">Services</a>
             <div class="dropdown-content">
-              <a href="#">For&#8209;Profits</a>
-              <a href="#">Nonprofits</a>
+              <a href="{% url "faqs" service_type="fractional_management" %}">Fractional&nbsp;Management</a>
+              <a href="{% url "faqs" service_type="consultations" %}">Consultations</a>
             </div>
           </li>
           <li><a href="{% url 'about' %}">About</a></li>
