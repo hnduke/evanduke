@@ -16,8 +16,8 @@ div.block:nth-child(odd) {
 }
 
 div.block .block-box {
-	margin: 20px;
-	padding: 20px;
+	margin: 1em;
+	padding: 1em;
 	text-align: center;
 }
 
@@ -25,7 +25,7 @@ div.block .block-box {
 	background-color: #f8f9fa;
 	padding: 10px;
 	margin: 10px;
-	max-width: 450px;
+	max-width: 50em;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
@@ -53,23 +53,10 @@ div.highlight h3 {
 }
 
 @media (max-width: 600px) {
-	/*
-	Make sure the text and images are int the appropriate order:
-	Text and image are opposite every other block on large displays (as defined in the HTML).
-	Text is always first on small displays.
-	*/
-	.text-highlight {
-		order: 1;
-	}
 
-	.img-highlight {
-		order: 2;
-	}
-
-	/* Make elements fit more comfortably on small screens*/
 	div.block .block-box {
-		padding: 10px;
-		margin: 10px;
+		padding: 0.5em;
+		margin: 0.5em;
 	}
 
 	.block-box img {
