@@ -12,7 +12,7 @@
     <div class="block-box text-highlight">
       <div class="highlight">
         <h1>Reach Out</h1>
-        <h3>Want to know if Evan can help?</h3>
+        <h3>Want to know if I can help?</h3>
       </div>
     </div>
     <div class="block-box img-highlight">
@@ -21,8 +21,8 @@
   </div>
 
   <div class="form">
-    <p>Evan Duke Enterprises will never sell your contact information.</p>
     <form method="post">
+    <p>Let me know what you need!</p>
       {% csrf_token %}
       <div class="fields">
         {% for field in form %}
@@ -34,5 +34,6 @@
       <button type="submit">Send</button>
       </div>
     </form>
+    <p>Evan Duke Enterprises will never sell your data.</p>
   </div>
 {% endblock content %}

@@ -1,16 +1,16 @@
 div.form p {
     margin: auto;
     text-align: center;
-    padding-top: 1em;
+    padding: 1em 1em 1em 0;
     max-width: 50em;
     font-family: arial, sans-serif;
     font-size: 125%;
-    padding-bottom: 1em;
 }
 
 div.fields {
     max-width: 35em;
     margin: auto;
+    padding: 0 1em;
 }
 
 div.formfield label {
@@ -23,9 +23,9 @@ div.formfield input, div.formfield textarea {
     width: 100%;
     border-radius: 4px;
     background-color: #eeeff0;
-    padding: 1em;
-    line-height: 100%;
+    font-size: 150%;
     margin-bottom: 1em;
+    padding: 5px;
 }
 
 div.formfield input:focus, div.formfield textarea:focus {
@@ -33,7 +33,7 @@ div.formfield input:focus, div.formfield textarea:focus {
     border: 2px solid #6989B8;
 }
 
-button {
+div.form button {
     text-align: center;
     background-color: #6989B8;
     border-radius: 4px;
@@ -41,4 +41,10 @@ button {
     font-size: 150%;
     font-family: arial, sans-serif;
     padding: 10px 16px;
+    display: block;
+    margin: auto;
+}
+
+div.form button:hover {
+    background-color: #5f7fae;
 }
