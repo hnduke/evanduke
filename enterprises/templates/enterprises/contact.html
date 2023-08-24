@@ -21,7 +21,7 @@
   </div>
 
   <div class="form">
-    <form method="post">
+    <form id="contact-form" method="post">
     <p>Let me know what you need!</p>
       {% csrf_token %}
       <div class="fields">
@@ -31,9 +31,16 @@
             {{ field.label_tag }} {{ field }}
           </div>
         {% endfor %}
-      <button type="submit">Send</button>
       </div>
+      <button id="contact" class="g-recaptcha" data-sitekey="{{ SITE_KEY }}" data-callback="onSubmit" data-action="{{ action }}">Send</button>
     </form>
     <p>Evan Duke Enterprises will never sell your data.</p>
   </div>
+
+<script>
+  function onSubmit(token) {
+    document.getElementById("contact-form").submit();
+  }
+</script>
+
 {% endblock content %}

@@ -150,3 +150,7 @@ ADMIN_INITIAL_PASSWORD = env("ADMIN_INITIAL_PASSWORD", default="default")
 ADMIN_INITIAL_EMAIL = env("ADMIN_INITIAL_EMAIL", default="default@default.com")
 ADMIN_INITIAL_FIRST_NAME = env("ADMIN_INITIAL_FIRST_NAME", default="default")
 ADMIN_INITIAL_LAST_NAME = env("ADMIN_INITIAL_LAST_NAME", default="default")
+
+# Google Recaptcha Enterprise
+GOOGLE_API_KEY = env("GOOGLE_API_KEY", default="")
+RECAPTCHA_SITE_KEY = env("RECAPTCHA_SITE_KEY", default="")
