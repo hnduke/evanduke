@@ -1,0 +1,17 @@
+div.thanks {
+    max-width: 35em;
+    margin: auto;
+    padding: 0 1em;
+    font-family: arial, sans-serif;
+    font-size: 125%;
+}
+
+div.thanks p.submission-data span.label {
+    font-weight: bold;
+    font-size: 90%;
+    display: block;
+}
+
+div.header p, div.header h2 {
+    text-align: center;
+}
