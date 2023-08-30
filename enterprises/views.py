@@ -37,6 +37,24 @@ class ContactView(FormView):
         return super().form_valid(form)
 
 
+def thank_you(request):
+    submission_uuid = request.session.get("submission-uuid")
+    if not submission_uuid:
+        # Handle the case where there's no UUID
+        return redirect("contact")
+
+    try:
+        submission = ContactFormSubmission.objects.get(id=submission_uuid)
+    except ContactFormSubmission.DoesNotExist:
+        # Handle not found
+        return redirect("contact")
+
+    del request.session["submission-uuid"]  # Clean up the session
+    return render(
+        request, "enterprises/contact-thank-you.html", {"submission": submission}
+    )
+
+
 def faqs(request, service_type):
     service_type_enum = getattr(ServiceType, service_type.upper(), None)
     if service_type_enum is None:
