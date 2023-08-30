@@ -11,13 +11,19 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### MVP
 
-- Finish styles (WIP)
-- Add Recaptcha to form submit (WIP)
-- Replace "Resources" with "Services" and add FAQ pages for services offered (DONE)
-- Integrate Calendy and place CTAs
+- WIP
+  - Finish styles
+  - Finish contact functionality
+- TODO:
+  - Deal with deprecation warnings
+  - Add logging/Sentry monitoring
+- DONE:
+  - Add Recaptcha to form submit
+  - Replace "Resources" with "Services" and add FAQ pages for services offered
 
 ### Post-launch Phase I
 
+- Integrate Calendy and place CTAs
 - Add Case Studies (Resources)
   - Design models
   - Design UI
@@ -37,3 +43,7 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 - Port to Django in preparation for custom work
 - Port the site to Flask (just to quickly get the app off the ground) using the same content, structure, and public resources.
 - Deploy port to AWS EC2 instance
+
+## Pre-launch checklist
+- look into gcloud docker image 
+  - https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev
