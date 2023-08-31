@@ -42,4 +42,7 @@ class ContactFormSubmissionAdmin(admin.ModelAdmin):
             extra_context=extra_context,
         )
 
+    def has_add_permission(self, request):
+        return False
+
     change_form_template = "admin/contact_submission.html"
