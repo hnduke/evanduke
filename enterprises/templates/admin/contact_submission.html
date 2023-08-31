@@ -1,0 +1,15 @@
+{% extends "admin/change_form.html" %}
+
+{% block content %}
+    <h1>{{ original }}</h1>
+    <p>Name: {{ original.name }}</p>
+    <p>Reply Email: {{ original.reply_email }}</p>
+    <p>Submission: {{ original.submission }}</p>
+    <p>Submitted At: {{ original.submitted_at }}</p>
+
+    <a href="{{ mailto_link }}" class="button">Reply via Email</a>
+    <br><br>
+    <div class="submit-row">
+        <a href="{% url 'admin:enterprises_contactformsubmission_delete' original.id %}" class="deletelink">Delete</a>
+    </div>
+{% endblock %}
