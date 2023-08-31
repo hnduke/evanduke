@@ -15,12 +15,17 @@ def mark_as_read(modeladmin, request, queryset):
     queryset.update(read=True)
 
 
+@admin.action(description="Mark selected submissions as unread")
+def mark_as_unread(modeladmin, request, queryset):
+    queryset.update(read=False)
+
+
 @admin.register(ContactFormSubmission)
 class ContactFormSubmissionAdmin(admin.ModelAdmin):
     ordering = ["submitted_at"]
     list_display = ["name", "read", "submitted_at", "read_at"]
     list_filter = ["read"]
-    actions = [mark_as_read]
+    actions = [mark_as_read, mark_as_unread]
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
         obj = self.model.objects.get(pk=object_id)
