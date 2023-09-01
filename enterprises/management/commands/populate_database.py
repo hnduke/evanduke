@@ -1,6 +1,10 @@
+import logging
+
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management import BaseCommand
+
+logger = logging.getLogger(__file__)
 
 
 class Command(BaseCommand):
@@ -25,4 +29,4 @@ class Command(BaseCommand):
             admin_user.last_name = settings.ADMIN_INITIAL_LAST_NAME
             admin_user.save()
 
-        print("ok")
+        logger.info("Database initial population complete.")

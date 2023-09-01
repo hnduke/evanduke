@@ -1,8 +1,12 @@
+import logging
+
 from django import forms
 from django.core.exceptions import BadRequest, ValidationError
 
 from enterprises.models import ContactFormSubmission
 from enterprises.recaptcha import is_human
+
+logger = logging.getLogger(__file__)
 
 SUBMISSION_CHAR_LIMIT = 1000
 
@@ -45,7 +49,7 @@ class ContactForm(forms.ModelForm):
         try:
             valid = is_human(captcha, self.action)
         except Exception as e:
-            # TODO: log e
+            logger.exception(e)
             self.add_error(
                 "submission",
                 "We are sorry, but we're experiencing some difficulties with our provider just now. Please "
