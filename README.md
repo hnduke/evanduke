@@ -13,13 +13,14 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 - WIP
   - Finish styles
-  - Finish contact functionality
 - TODO:
   - Deal with deprecation warnings
-  - Add logging/Sentry monitoring
+  - Add Sentry monitoring
 - DONE:
   - Add Recaptcha to form submit
   - Replace "Resources" with "Services" and add FAQ pages for services offered
+  - Finish contact functionality
+  - Add logging
 
 ### Post-launch Phase I
 
@@ -30,13 +31,14 @@ Evan Duke Enterprises created a business site in 2008 using Joomla. It is curren
 
 ### In Progress
 
-- Update styles
+- MVP
 
 ### Backlog
 
 - Create CI/CD pipeline
 - Feature: manage case studies
 - Feature: schedule a free consultation
+- Quickbooks integration
 
 ### Deployed
 
