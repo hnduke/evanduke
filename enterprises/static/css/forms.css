@@ -22,23 +22,22 @@ div.formfield label {
 div.formfield input, div.formfield textarea {
     width: 100%;
     border-radius: 4px;
-    background-color: #eeeff0;
+    background-color: #EBEDF0;
     font-size: 150%;
     margin-bottom: 1em;
     padding: 5px;
 }
 
 div.formfield input:focus, div.formfield textarea:focus {
-    background-color: #f8f9fa;
-    border: 2px solid #6989B8;
+    background-color: #F5F7FA;
 }
 
 div.form button {
     text-align: center;
-    background-color: #6989B8;
+    background-color: #695A5F;
     border-radius: 4px;
-    font-weight: bold;
-    font-size: 150%;
+    font-weight: bolder;
+    font-size: 175%;
     font-family: arial, sans-serif;
     padding: 10px 16px;
     display: block;
@@ -46,5 +45,5 @@ div.form button {
 }
 
 div.form button:hover {
-    background-color: #5f7fae;
+    background-color: #5F5055;
 }

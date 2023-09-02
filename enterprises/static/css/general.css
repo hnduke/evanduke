@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+	background-color: #F5F7FA;
 }
 
 div.block {
@@ -8,11 +9,11 @@ div.block {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	background-color: #0B1D72;
+	background-color: #5F5055;
 }
 
 div.block:nth-child(odd) {
-	background-color: #6989B8;
+	background-color: #FDF6E3;
 }
 
 div.block .block-box {
@@ -22,11 +23,15 @@ div.block .block-box {
 }
 
 .block-box .highlight {
-	background-color: #f8f9fa;
+	background-color: #F5F7FA;
 	padding: 10px;
 	margin: 10px;
 	max-width: 50em;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 8px 16px 0 #23181C;
+}
+
+div.block:nth-child(odd) .block-box .highlight {
+	box-shadow: 0 8px 16px 0 #352A30;
 }
 
 .block-box img {
