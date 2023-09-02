@@ -36,7 +36,8 @@ div.block:nth-child(odd) .block-box .highlight {
 
 .block-box img {
 	padding: 10px;
-	max-width: 300px;
+	max-width: 20em;
+	border-radius: 50%;
 }
 
 div.highlight h1 {
