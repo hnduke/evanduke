@@ -24,10 +24,11 @@ div.block .block-box {
 
 .block-box .highlight {
 	background-color: #F5F7FA;
-	padding: 10px;
-	margin: 10px;
+	padding: 1.5em;
+	margin: 1em;
 	max-width: 50em;
 	box-shadow: 0 8px 16px 0 #23181C;
+	border-radius: 5em;
 }
 
 div.block:nth-child(odd) .block-box .highlight {
@@ -56,6 +57,11 @@ div.highlight h3 {
 	font-size: 1.5em;
 	margin: 5px;
 	padding: 5px;
+}
+
+div.highlight p {
+	font-size: 150%;
+	font-family: Arial, sans-serif;
 }
 
 @media (max-width: 600px) {
