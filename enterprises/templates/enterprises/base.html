@@ -20,6 +20,7 @@
 
     <script src="{% static 'js/general.js' %}" type="text/javascript"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfEg7AnAAAAAH38dRM3Mc2DREzkIYtIYBLuLLkU"></script>
+    <script src="https://kit.fontawesome.com/d4306b8096.js" crossorigin="anonymous"></script>
 
   {% block extra_headers %}{% endblock %}
 
@@ -50,25 +51,18 @@
     {% endblock content %}
 
     <!-- BEGIN: FOOTER -->
-    <div class="footer">
-      <div class="more">
+      <div class="footer">
+        <h3>Follow Evan</h3>
         <div class="links">
-          <h4>Looking for something else?</h4>
-          <a href="#">Brass Lessons</a>
-          <a href="#">Business Administration Services</a>
+          <a href="https://www.facebook.com/DukeEnterprisesSCOR/"><i class="fa-brands fa-facebook" style="color: #15a2fa;"></i>&nbsp;Facebook</a>
+          <a href="https://www.linkedin.com/company/evan-duke-enterprises/"><i class="fa-brands fa-linkedin" style="color: #0077b5;"></i>&nbsp;LinkedIn</a>
+          <a href="https://wa.me/8642385223"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>&nbsp;WhatsApp</a>
+          <a href="https://www.youtube.com/@EvanDukeEnterprisesInc"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i>&nbsp;YouTube</a>
         </div>
-        <div class="links">
-          <h4>Follow Evan</h4>
-          <a href="https://www.facebook.com/DukeEnterprisesSCOR/">Facebook</a>
-          <a href="https://www.linkedin.com/in/evan-duke-0a57ba34/">LinkedIn</a>
-          <a href="https://wa.me/8642385223">WhatsApp</a>
-          <a href="https://www.youtube.com/@EvanDukeEnterprisesInc">YouTube</a>
+        <div class="branding">
+          <div><a href="{% url 'index' %}" target="_blank">Evan Duke Enterprises</a> &copy; {% now "Y" %}</div>
         </div>
       </div>
-      <div class="branding">
-        <div><a href="{% url 'index' %}" target="_blank">Evan Duke Enterprises</a> &copy; {% now "Y" %}</div>
-      </div>
-    </div>
     <!-- END: FOOTER -->
 
   </body>

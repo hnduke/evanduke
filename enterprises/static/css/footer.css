@@ -1,5 +1,6 @@
 div.footer {
 	background-color: #EBEDF0;
+	border-top: 1px solid #FAFCFF;
 }
 
 div.footer a {
@@ -7,20 +8,19 @@ div.footer a {
 	text-decoration: none;
 }
 
-div.more {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+div.footer h3 {
+	margin: auto;
+	text-align: center;
+	padding: 1.5em;
 }
 
 div.links {
-	margin: 2em;
+	margin: auto;
+	padding: 0 2em 2em 2em;
+	font-size: 125%;
 	display: flex;
-	flex-direction: column;
-}
-
-div.links > * {
-	margin: 0.5em;
+	justify-content: space-around;
+	max-width: 30em;
 }
 
 div.branding {
@@ -31,19 +31,21 @@ div.branding {
 
 div.branding div {
 	display: block;
+	padding: 1em;
 }
 
 @media (max-width: 600px) {
 
-	div.more {
-		text-align: center;
-	}
-
 	div.links {
-		margin-bottom: 0;
+		margin: auto;
+		padding: 0 2em 2em 2em;
+		font-size: 125%;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		max-width: 30em;
 	}
-
-	div.branding {
-		margin-top: 1em;
+	div.links a {
+		margin: 0.5em;
 	}
 }
