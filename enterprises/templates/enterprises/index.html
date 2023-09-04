@@ -3,6 +3,10 @@
 
 {% block title %}Evan Duke Enterprises{% endblock title %}
 
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" />
+{% endblock %}
+
 {% block content %}
   <div class="block">
     <div class="block-box text-highlight">
@@ -11,8 +15,8 @@
         <h3>with your business costs?</h3>
       </div>
     </div>
-    <div class="block-box img-highlight">
-      <img src="{% static 'img/consultation.jpg' %}" alt="Evan training a client on a streamlined process.">
+    <div class="img-highlight">
+      <img id="front-page" src="{% static 'img/consultation.jpg' %}" alt="Evan training a client on a streamlined process.">
     </div>
   </div>
 
