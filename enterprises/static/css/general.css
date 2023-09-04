@@ -70,3 +70,35 @@ div.highlight h3 {
 	}
 
 }
+
+@media (min-width: 999px) {
+	div.highlight.first h1 {
+		font-size: 5em;
+		margin: 5px;
+		padding: 5px;
+	}
+
+	div.highlight.first h3 {
+		font-size: 3em;
+		margin: 5px;
+		padding: 5px;
+	}
+
+	div.highlight h1 {
+		font-size: 3.5em;
+		margin: 5px;
+		padding: 5px;
+	}
+
+	div.highlight h2 {
+		font-size: 3em;
+		margin: 5px;
+		padding: 5px;
+	}
+
+	div.highlight h3 {
+		font-size: 2em;
+		margin: 5px;
+		padding: 5px;
+	}
+}
