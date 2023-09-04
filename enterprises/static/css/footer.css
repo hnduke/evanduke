@@ -33,10 +33,6 @@ div.branding div {
 	display: block;
 }
 
-div.branding div a img {
-	width: 5em;
-}
-
 @media (max-width: 600px) {
 
 	div.more {

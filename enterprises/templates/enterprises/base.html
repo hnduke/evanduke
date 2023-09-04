@@ -28,7 +28,7 @@
     <header>
       <nav>
         <div id="navbar">
-          <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/logo1.png' %}" alt="Evan Duke Enterprises Home"></a>
+          <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/logo.png' %}" alt="Evan Duke Enterprises Home"></a>
           <a href="javascript:void(0);" id="hamburger">&#9776;</a>
         </div>
 
@@ -66,24 +66,10 @@
         </div>
       </div>
       <div class="branding">
-        <div><a href="{% url 'index' %}" id="logo"><img src="{% static 'img/logo1.png' %}" alt="Evan Duke Enterprises Home"></a></div>
         <div><a href="{% url 'index' %}" target="_blank">Evan Duke Enterprises</a> &copy; {% now "Y" %}</div>
       </div>
     </div>
     <!-- END: FOOTER -->
-
-{#  <script>#}
-{#  function onClick(e) {#}
-{#    e.preventDefault();#}
-{#    grecaptcha.enterprise.ready(async () => {#}
-{#      const token = await grecaptcha.enterprise.execute('6LfEg7AnAAAAAH38dRM3Mc2DREzkIYtIYBLuLLkU', {action: 'LOGIN'});#}
-{#      // IMPORTANT: The 'token' that results from execute is an encrypted response sent by#}
-{#      // reCAPTCHA Enterprise to the end user's browser.#}
-{#      // This token must be validated by creating an assessment.#}
-{#      // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment#}
-{#    });#}
-{#  }#}
-{#</script>#}
 
   </body>
 </html>
