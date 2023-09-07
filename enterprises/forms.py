@@ -2,6 +2,7 @@ import logging
 
 from django import forms
 from django.core.exceptions import BadRequest, ValidationError
+from google.auth.exceptions import DefaultCredentialsError, MutualTLSChannelError
 
 from enterprises.models import ContactFormSubmission
 from enterprises.recaptcha import is_human
@@ -48,7 +49,7 @@ class ContactForm(forms.ModelForm):
         captcha = self.data.get("g-recaptcha-response")
         try:
             valid = is_human(captcha, self.action)
-        except Exception as e:
+        except (DefaultCredentialsError, MutualTLSChannelError) as e:
             logger.exception(e)
             self.add_error(
                 "submission",
