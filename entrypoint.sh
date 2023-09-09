@@ -2,14 +2,14 @@
 
 set -e
 
-# Run migrations
+echo "Run migrations"
 python manage.py migrate
 
-# Populate database as needed
+echo "Populate database"
 python manage.py populate_database
 
-# Run collectstatic if necessary
+echo "Run collectstatic"
 python manage.py collectstatic --noinput
 
-# Start the Gunicorn server
+echo "Start Gunicorn"
 exec gunicorn --bind 0.0.0.0:8080 --access-logfile - "evanduke.wsgi"

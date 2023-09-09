@@ -13,10 +13,13 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ENV AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
-RUN aws s3 cp s3://evanduke/.env /app/.env
+RUN aws s3 cp s3://evanduke/.rc.env /app/.env
 
 # Second stage: Copy .env file from first stage and install your application
 FROM python:3.11-slim as final
+
+# Declare EVANDUKE_VERSION as build argument
+ARG EVANDUKE_VERSION
 
 # Install dependencies (curl, poetry)
 RUN apt-get update \
@@ -26,14 +29,15 @@ RUN apt-get update \
 
 WORKDIR /app
 
-# Copy the project files
-COPY . .
+# Copy needed project files to where Django and Docker both expect them.
+COPY pyproject.toml manage.py entrypoint.sh /app/
 
 # Copy the .env file from the builder stage
 COPY --from=builder /app/.env /app/.env
 
 # Install the dependencies
-RUN /root/.local/bin/poetry config virtualenvs.create false \
+RUN pip install evanduke=$EVANDUKE_VERSION \
+    && /root/.local/bin/poetry config virtualenvs.create false \
     && /root/.local/bin/poetry install --only main --no-root
 
 ENTRYPOINT ["/app/entrypoint.sh"]
