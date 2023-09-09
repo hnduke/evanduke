@@ -1,4 +1,5 @@
 import pytest
+from google.auth.exceptions import MutualTLSChannelError
 
 from enterprises.forms import SUBMISSION_CHAR_LIMIT, BadRequest, ContactForm
 
@@ -46,7 +47,7 @@ def test_recaptcha_fail(mocker, valid_data):
 
 def test_recaptcha_exception(mocker, valid_data):
     mock_is_human = mocker.patch("enterprises.forms.is_human")
-    mock_is_human.side_effect = Exception("Random Exception")
+    mock_is_human.side_effect = MutualTLSChannelError("Here's an exception")
     form = ContactForm(data=valid_data)
     assert not form.is_valid()
     assert "submission" in form.errors
