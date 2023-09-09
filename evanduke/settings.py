@@ -158,7 +158,7 @@ GOOGLE_API_KEY = env("GOOGLE_API_KEY", default="")
 RECAPTCHA_SITE_KEY = env("RECAPTCHA_SITE_KEY", default="")
 
 # Logging
-LOGGING_DIR = os.path.join(BASE_DIR, "logs")
+LOGGING_DIR = env("LOGGING_DIR", default=os.path.join(BASE_DIR, "logs"))
 
 if not os.path.exists(LOGGING_DIR):
     os.mkdir(LOGGING_DIR)
