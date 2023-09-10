@@ -21,6 +21,9 @@ FROM python:3.11-slim as final
 # Declare EVANDUKE_VERSION as build argument
 ARG EVANDUKE_VERSION
 
+# Set path to .env as environment variable
+ENV ENV_PATH=/app
+
 # Install dependencies (curl, poetry)
 RUN apt-get update \
     && apt-get install -y curl \
