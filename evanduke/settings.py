@@ -22,9 +22,9 @@ env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Set path to .env
-ENV_PATH = os.environ.get("ENV_PATH")
-if ENV_PATH:
-    environ.Env.read_env(os.path.join(ENV_PATH, ".env"))
+APP_DIR = os.environ.get("ENV_PATH")
+if APP_DIR:
+    environ.Env.read_env(os.path.join(APP_DIR, ".env"))
 else:
     environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
@@ -33,7 +33,6 @@ else:
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY", default="")
-print(env("SECRET_KEY", default="Not found"))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -145,7 +144,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+if APP_DIR:
+    STATIC_ROOT = os.path.join(APP_DIR, "staticfiles")
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
