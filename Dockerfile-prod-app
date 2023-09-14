@@ -15,14 +15,16 @@ ENV AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
 RUN aws s3 cp s3://evanduke/.rc.env /app/.env
 
-# Second stage: Copy .env file from first stage and install your application
+# Second stage: Set up required environment variables and install the application
 FROM python:3.11-slim as final
 
-# Declare EVANDUKE_VERSION as build argument
+# Declare the application version to install
 ARG EVANDUKE_VERSION
+ARG GOOGLE_APPLICATION_CREDENTIALS
 
 # Set path to .env as environment variable
 ENV ENV_PATH=/app
+ENV GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
 
 # Install dependencies (curl, poetry) and create directories
 RUN apt-get update \
