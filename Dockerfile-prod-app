@@ -24,11 +24,12 @@ ARG EVANDUKE_VERSION
 # Set path to .env as environment variable
 ENV ENV_PATH=/app
 
-# Install dependencies (curl, poetry)
+# Install dependencies (curl, poetry) and create directories
 RUN apt-get update \
     && apt-get install -y curl \
     && rm -rf /var/lib/apt/lists/* \
-    && curl -sSL https://install.python-poetry.org | python3 -
+    && curl -sSL https://install.python-poetry.org | python3 - \
+    && mkdir /app/.storage
 
 WORKDIR /app
 
