@@ -5,7 +5,7 @@ services:
     restart: always
     volumes:
       - static_volume:/app/staticfiles
-      - ./etc/evanduke/.storage:/app/.storage
+      - etc/evanduke/.storage:/etc/evanduke/.storage
     ports:
       - "8080:8080"
     networks:
