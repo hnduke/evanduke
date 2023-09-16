@@ -10,7 +10,7 @@ logger = logging.getLogger(__file__)
 
 def create_assessment(token: str) -> Assessment | None:
     """Create an assessment to analyze the risk of a UI action using the provided token."""
-    project_id = "evan-duke-enterprises"
+    project_id = settings.GOOGLE_PROJECT_ID
     client = recaptchaenterprise_v1.RecaptchaEnterpriseServiceClient()
 
     # Set the properties of the event to be tracked.

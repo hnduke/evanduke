@@ -165,6 +165,7 @@ ADMIN_INITIAL_LAST_NAME = env("ADMIN_INITIAL_LAST_NAME", default="default")
 # Google Recaptcha Enterprise
 GOOGLE_API_KEY = env("GOOGLE_API_KEY", default="")
 RECAPTCHA_SITE_KEY = env("RECAPTCHA_SITE_KEY", default="")
+GOOGLE_PROJECT_ID = env("GOOGLE_PROJECT_ID", default="")
 
 # Logging
 LOGGING_DIR = env("LOGGING_DIR", default=os.path.join(BASE_DIR, "logs"))
