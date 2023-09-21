@@ -5,11 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic import FormView
 
 from enterprises.forms import ContactForm
-from enterprises.models import (
-    ContactFormSubmission,
-    FrequentlyAskedQuestion,
-    ServiceType,
-)
+from enterprises.models import ContactFormSubmission, FrequentlyAskedQuestion, ServiceType
 
 
 def index(request):
