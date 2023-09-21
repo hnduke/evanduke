@@ -61,4 +61,4 @@ jobs:
         echo "DATABASE_PASSWORD=postgres" >> $GITHUB_ENV
 
     - name: Run Tests
-      run: poetry run pytest
+      run: poetry run pytest --cov=enterprises --cov-fail-under=90
