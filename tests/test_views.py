@@ -80,3 +80,13 @@ def test_thank_you_view_with_session(client):
     response = client.get(reverse("thank-you"))
     assert response.status_code == 200
     assert response.context["submission"].id == submission.id
+
+
+def test_index_page_loads_correctly(client):
+    response = client.get(reverse("index"))
+    assert response.status_code == 200
+
+
+def test_about_page_loads_correctly(client):
+    response = client.get(reverse("about"))
+    assert response.status_code == 200
