@@ -5,11 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic import FormView
 
 from enterprises.forms import ContactForm
-from enterprises.models import (
-    ContactFormSubmission,
-    FrequentlyAskedQuestion,
-    ServiceType,
-)
+from enterprises.models import ContactFormSubmission, FrequentlyAskedQuestion, ServiceType
 
 
 def index(request):
@@ -50,9 +46,7 @@ def thank_you(request):
         return redirect("contact")
 
     del request.session["submission-uuid"]  # Clean up the session
-    return render(
-        request, "enterprises/contact-thank-you.html", {"submission": submission}
-    )
+    return render(request, "enterprises/contact-thank-you.html", {"submission": submission})
 
 
 def faqs(request, service_type):
@@ -61,6 +55,4 @@ def faqs(request, service_type):
         raise Http404
     service_value = service_type_enum.value
     faqs = FrequentlyAskedQuestion.objects.filter(service_type=service_value).iterator()
-    return render(
-        request, "enterprises/faqs.html", {"faqs": faqs, "service_type": service_value}
-    )
+    return render(request, "enterprises/faqs.html", {"faqs": faqs, "service_type": service_value})

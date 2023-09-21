@@ -36,8 +36,7 @@ class ContactFormSubmissionAdmin(admin.ModelAdmin):
         extra_context = extra_context or {}
         extra_context["show_delete_link"] = True
         extra_context["mailto_link"] = (
-            f"mailto:{obj.reply_email}?"
-            f"subject=Response%20from%20Evan%20Duke%20Enterprises&body={obj.submission}"
+            f"mailto:{obj.reply_email}?" f"subject=Response%20from%20Evan%20Duke%20Enterprises&body={obj.submission}"
         )
 
         return super().change_view(

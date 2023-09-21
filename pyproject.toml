@@ -35,8 +35,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 extend-exclude = "migrations/*"
-max-line-length = 120
-
+line-length = 120
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "evanduke.settings"

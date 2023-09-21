@@ -26,18 +26,14 @@ class ContactForm(forms.ModelForm):
             "submission": "Comment",
         }
         widgets = {
-            "submission": forms.Textarea(
-                attrs={"rows": 5, "maxlength": SUBMISSION_CHAR_LIMIT}
-            ),
+            "submission": forms.Textarea(attrs={"rows": 5, "maxlength": SUBMISSION_CHAR_LIMIT}),
         }
 
     def clean_submission(self):
         submission = self.cleaned_data.get("submission")
         if submission and len(submission) <= SUBMISSION_CHAR_LIMIT:
             return submission
-        raise ValidationError(
-            f"The maximum number of characters allowed is {SUBMISSION_CHAR_LIMIT}"
-        )
+        raise ValidationError(f"The maximum number of characters allowed is {SUBMISSION_CHAR_LIMIT}")
 
     def clean(self):
         """Check the reCAPTCHA in addition to everything else.

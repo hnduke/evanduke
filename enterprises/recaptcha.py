@@ -58,8 +58,6 @@ def is_human(token: str, recaptcha_action: str, threshold=0.85) -> bool:
         # see: https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment
         for reason in assessment.risk_analysis.reasons:
             logger.info(f"Risk analysis reason: {reason}")
-        logger.info(
-            f"The reCAPTCHA score for this token is: {str(assessment.risk_analysis.score)}"
-        )
+        logger.info(f"The reCAPTCHA score for this token is: {str(assessment.risk_analysis.score)}")
 
     return assessment.risk_analysis.score >= threshold
