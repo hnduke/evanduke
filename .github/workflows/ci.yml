@@ -48,6 +48,9 @@ jobs:
     - name: Run flake8
       run: poetry run flake8
 
+    - name: Run PyCQA/Bandit
+      run: bandit -r enterprises
+
     - name: Setup Database
       run: PGPASSWORD=postgres psql -h localhost -U postgres -c "CREATE DATABASE test_db;"
 

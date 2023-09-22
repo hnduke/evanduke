@@ -28,6 +28,7 @@ black = "^23"
 pytest-django = "^4.5"
 pytest-mock = "^3.11"
 pytest-cov = "^4.1"
+bandit = "^1.7.5"
 
 [build-system]
 requires = ["poetry-core"]
