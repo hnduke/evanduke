@@ -2,7 +2,7 @@
 
 FROM python:3.11-alpine
 
-ENV POETRY_VERSION=1.3.2 \
+ENV POETRY_VERSION=1.6.1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
@@ -23,5 +23,9 @@ COPY . .
 RUN /root/.local/bin/poetry config virtualenvs.create false \
     && /root/.local/bin/poetry install --only main --no-root
 
-CMD python manage.py runserver 0.0.0.0:8000
+#RUN pip install --index-url=URL_OF_YOUR_PYPI_SERVER evanduke==VERSION \
+#    && /root/.local/bin/poetry config virtualenvs.create false \
+#    && /root/.local/bin/poetry install --only main --no-root
 
+#CMD python manage.py runserver 0.0.0.0:8000
+ENTRYPOINT ["/app/entrypoint-dev.sh"]
