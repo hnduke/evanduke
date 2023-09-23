@@ -42,8 +42,8 @@ jobs:
     - name: Run black
       run: poetry run black --check .
 
-    - name: Run flake8 .
-      run: poetry run flake8
+    - name: Run flake8
+      run: poetry run flake8 .
 
     - name: Run PyCQA/Bandit
       run:  poetry run bandit -r enterprises
