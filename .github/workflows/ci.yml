@@ -6,9 +6,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.11]
 
     services:
       postgres:
@@ -31,7 +28,7 @@ jobs:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.11
 
     - name: Install Poetry
       run: curl -sSL https://install.python-poetry.org | python3 -
