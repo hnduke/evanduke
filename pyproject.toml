@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "evanduke"
-version = "1.0.0-rc6"
+version = "1.0.0"
 description = ""
 authors = ["Heather Duke <heather@heathernoelduke.com>"]
 readme = "README.md"
